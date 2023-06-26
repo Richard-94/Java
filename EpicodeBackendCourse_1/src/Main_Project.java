@@ -20,6 +20,7 @@ public class Main_Project {
 	}
 
 	
+
 	public static int multiply(int a, int b) {
 		int results = a *b;
 		return results;
@@ -45,6 +46,12 @@ public class Main_Project {
 				
 				return a;
 		
+	}
+	
+	public static String unite(String first, String middle, String last) {
+		Scanner name = new Scanner (System.in);
+		System.out.print = name("Your name:");
+
 	}
 
 }
