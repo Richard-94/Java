@@ -18,6 +18,7 @@ public class Esercizio_1 {
 	
 	public static void test() {
 		Set<String> oggetti = new HashSet<String>();
+		Set<String> diversi = new HashSet<String>();
 		
 		log.info("Inserisci numero di valori: ");
 		
@@ -25,21 +26,23 @@ public class Esercizio_1 {
 		for(int i=0;i<a;i++) {
 			log.info("Inserisci valore {}: ", i + 1);
 			String valore = sc.nextLine();
-			oggetti.add(valore);
+			if(!oggetti.add(valore))
+			diversi.add(valore);
 		}
 		int a1 = oggetti.size();
+		int a2=diversi.size();
 		
-		Object[] arr = oggetti.toArray();
-		for (Object e : arr) {
-			if(e==valore) {
-				
-				log.info("Elementi duplicati: " + valore);
-			}else {
-				log.info("Elementi non duplicati: " + valore);
-			}
+		for(String valore:oggetti) {
+			log.info(valore);
 		}
 		
-		//log.info("Size: {}", a1);
+		for(String valore:diversi) {
+			log.info("valore duplicate:" + valore);
+		}
+		
+		
+		log.info("duplicate: {}", a1);
+		log.info("non duplicate: {}", a2);
 
 		
 	}
@@ -67,32 +70,30 @@ public class Esercizio_1 {
 	    log.info("Inverted numbers: {}", randomNumber);
 	}
 	
+	
+	
 	public static int[] bool(int[] num, boolean a) {
-		List<Integer> randomNumber = new ArrayList<Integer>();
-	    for (int number : num) {
-	        randomNumber.add(number);
+		List<Integer> randomEven = new ArrayList<Integer>();
+		List<Integer> randomOdd= new ArrayList<Integer>();
+	    for (int i=0;i<num.length;i++) {
+	    	if(i%2==0) {
+	    		randomEven.add(num[i]);
+	    		
+	    	}else {
+	    		randomOdd.add(num[i]);
+	    	}
 	    }
 	    
-	    List<Integer> result = new ArrayList<Integer>();
-		for(int i=0; i<randomNumber.size(); i++) {
-			int currentNumber = randomNumber.get(i);
-			if(a) {
-				if(	currentNumber%2==0) {
-					 result.add(currentNumber);
-				
-				}
-				
-			}else {
-				result.add(currentNumber);
-			}
+	    for(int num1: randomEven) {
+			log.info("even index:" + num1);
 		}
-		
-		  int[] resultArray = new int[result.size()];
-		    for (int i = 0; i < result.size(); i++) {
-		        resultArray[i] = result.get(i);
-		    }
-		    log.info("even/odd: {}", resultArray);
-		    return resultArray;
+	    
+	    for(int num2: randomOdd) {
+			log.info("odd index:" + num2);
+		}
+		return num;
+	    
+	   
 	}
 
 	

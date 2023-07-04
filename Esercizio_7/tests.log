@@ -401,3 +401,159 @@
 15:53:01.681 [main] INFO  Esercizio_1 - Inserisci numero di valore: 
 15:53:05.337 [main] INFO  Esercizio_1 - Random numbers: [82, 55, 97, 44, 42, 22, 77, 59, 92, 35, 33, 95, 79, 96, 97, 97, 55, 82, 55, 51, 21, 46, 35, 57, 61, 17, 6, 64, 3, 100]
 15:53:05.339 [main] INFO  Esercizio_1 - even/odd: [82, 44, 42, 22, 92, 96, 82, 46, 6, 64, 100]
+19:09:16.328 [main] INFO  Esercizio_1 - Inserisci numero di valore: 
+19:09:19.952 [main] INFO  Esercizio_1 - Random numbers: [86, 7, 11]
+19:09:19.954 [main] INFO  Esercizio_1 - even/odd: [86]
+19:09:39.262 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+19:09:41.503 [main] INFO  Esercizio_1 - Inserisci valore 1: 
+19:09:42.335 [main] INFO  Esercizio_1 - Inserisci valore 2: 
+19:09:43.246 [main] INFO  Esercizio_1 - Inserisci valore 3: 
+19:09:43.974 [main] INFO  Esercizio_1 - ss
+19:09:43.975 [main] INFO  Esercizio_1 - f
+19:12:09.850 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+19:12:11.415 [main] INFO  Esercizio_1 - Inserisci valore 1: 
+19:12:15.415 [main] INFO  Esercizio_1 - Inserisci valore 2: 
+19:12:17.711 [main] INFO  Esercizio_1 - Inserisci valore 3: 
+19:12:20.214 [main] INFO  Esercizio_1 - cc
+19:12:20.215 [main] INFO  Esercizio_1 - coapp
+19:12:20.215 [main] INFO  Esercizio_1 - ciaoo
+19:12:20.215 [main] INFO  Esercizio_1 - Size: 3
+19:12:20.215 [main] INFO  Esercizio_1 - Size: 0
+19:12:56.424 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+19:12:57.839 [main] INFO  Esercizio_1 - Inserisci valore 1: 
+19:13:00.431 [main] INFO  Esercizio_1 - Inserisci valore 2: 
+19:13:01.734 [main] INFO  Esercizio_1 - Inserisci valore 3: 
+19:13:03.366 [main] INFO  Esercizio_1 - dd
+19:13:03.367 [main] INFO  Esercizio_1 - ciao
+19:13:03.367 [main] INFO  Esercizio_1 - valore duplicate:ciao
+19:13:03.367 [main] INFO  Esercizio_1 - Size: 2
+19:13:03.367 [main] INFO  Esercizio_1 - Size: 1
+19:14:00.427 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+19:14:01.767 [main] INFO  Esercizio_1 - Inserisci valore 1: 
+19:14:04.263 [main] INFO  Esercizio_1 - Inserisci valore 2: 
+19:14:09.894 [main] INFO  Esercizio_1 - Inserisci valore 3: 
+19:14:12.694 [main] INFO  Esercizio_1 - Inserisci valore 4: 
+19:14:16.686 [main] INFO  Esercizio_1 - Inserisci valore 5: 
+19:14:19.037 [main] INFO  Esercizio_1 - no
+19:14:19.038 [main] INFO  Esercizio_1 - yes
+19:14:19.038 [main] INFO  Esercizio_1 - ciaoo
+19:14:19.038 [main] INFO  Esercizio_1 - valore duplicate:no
+19:14:19.038 [main] INFO  Esercizio_1 - valore duplicate:ciaoo
+19:14:19.038 [main] INFO  Esercizio_1 - duplicate: 3
+19:14:19.038 [main] INFO  Esercizio_1 - non duplicate: 2
+19:29:02.036 [main] INFO  Esercizio_1 - Inserisci numero di valore: 
+19:29:08.381 [main] INFO  Esercizio_1 - Random numbers: [98, 85, 22, 10, 18]
+19:29:08.383 [main] INFO  Esercizio_1 - even index:98
+19:29:08.384 [main] INFO  Esercizio_1 - even index:22
+19:29:08.384 [main] INFO  Esercizio_1 - even index:18
+19:29:08.384 [main] INFO  Esercizio_1 - even index:85
+19:29:08.384 [main] INFO  Esercizio_1 - even index:10
+19:30:07.982 [main] INFO  Esercizio_1 - Inserisci numero di valore: 
+19:30:11.629 [main] INFO  Esercizio_1 - Random numbers: [83, 20, 29, 98, 63]
+19:30:11.631 [main] INFO  Esercizio_1 - even index:83
+19:30:11.631 [main] INFO  Esercizio_1 - even index:29
+19:30:11.631 [main] INFO  Esercizio_1 - even index:63
+19:30:11.631 [main] INFO  Esercizio_1 - odd index:20
+19:30:11.631 [main] INFO  Esercizio_1 - odd index:98
+19:30:50.911 [main] INFO  Esercizio_1 - Inserisci numero di valore: 
+19:30:53.117 [main] INFO  Esercizio_1 - Random numbers: [31, 45, 69, 42, 90]
+19:30:53.119 [main] INFO  Esercizio_1 - odd index:31
+19:30:53.119 [main] INFO  Esercizio_1 - odd index:69
+19:30:53.119 [main] INFO  Esercizio_1 - odd index:90
+19:30:53.120 [main] INFO  Esercizio_1 - even index:45
+19:30:53.120 [main] INFO  Esercizio_1 - even index:42
+19:32:01.828 [main] INFO  Esercizio_1 - Inserisci numero di valore: 
+19:32:05.557 [main] INFO  Esercizio_1 - Random numbers: [74, 29, 21, 98, 68, 47, 14, 6]
+19:32:05.560 [main] INFO  Esercizio_1 - even index:74
+19:32:05.560 [main] INFO  Esercizio_1 - even index:21
+19:32:05.560 [main] INFO  Esercizio_1 - even index:68
+19:32:05.560 [main] INFO  Esercizio_1 - even index:14
+19:32:05.560 [main] INFO  Esercizio_1 - odd index:29
+19:32:05.560 [main] INFO  Esercizio_1 - odd index:98
+19:32:05.560 [main] INFO  Esercizio_1 - odd index:47
+19:32:05.561 [main] INFO  Esercizio_1 - odd index:6
+19:32:09.509 [main] INFO  Esercizio_1 - Inserisci numero di valore: 
+19:32:10.301 [main] INFO  Esercizio_1 - Random numbers: [66, 83, 58, 61, 80]
+19:32:10.303 [main] INFO  Esercizio_1 - even index:66
+19:32:10.303 [main] INFO  Esercizio_1 - even index:58
+19:32:10.303 [main] INFO  Esercizio_1 - even index:80
+19:32:10.303 [main] INFO  Esercizio_1 - odd index:83
+19:32:10.303 [main] INFO  Esercizio_1 - odd index:61
+19:37:43.475 [main] INFO  Esercizio_1 - Inserisci numero di valore: 
+19:37:45.564 [main] INFO  Esercizio_1 - Random numbers: [36, 42, 81, 1, 37]
+19:37:45.566 [main] INFO  Esercizio_1 - even index:0
+19:37:45.567 [main] INFO  Esercizio_1 - even index:2
+19:37:45.567 [main] INFO  Esercizio_1 - even index:4
+19:37:45.567 [main] INFO  Esercizio_1 - odd index:1
+19:37:45.567 [main] INFO  Esercizio_1 - odd index:3
+19:38:22.305 [main] INFO  Esercizio_1 - Inserisci numero di valore: 
+19:38:23.292 [main] INFO  Esercizio_1 - Random numbers: [40, 41, 39, 52]
+19:38:23.294 [main] INFO  Esercizio_1 - even index:0
+19:38:23.294 [main] INFO  Esercizio_1 - even index:2
+19:38:23.294 [main] INFO  Esercizio_1 - odd index:1
+19:38:23.294 [main] INFO  Esercizio_1 - odd index:3
+19:39:10.732 [main] INFO  Esercizio_1 - Inserisci numero di valore: 
+19:39:17.132 [main] INFO  Esercizio_1 - Random numbers: [61, 53, 81, 45, 91]
+19:39:17.134 [main] INFO  Esercizio_1 - odd index:0
+19:39:17.134 [main] INFO  Esercizio_1 - odd index:2
+19:39:17.134 [main] INFO  Esercizio_1 - odd index:4
+19:39:17.134 [main] INFO  Esercizio_1 - even index:1
+19:39:17.134 [main] INFO  Esercizio_1 - even index:3
+19:40:44.169 [main] INFO  Esercizio_1 - Inserisci numero di valore: 
+19:40:45.724 [main] INFO  Esercizio_1 - Random numbers: [98, 33, 75, 66, 25]
+19:40:45.726 [main] INFO  Esercizio_1 - even index: 0, element: 98
+19:40:45.726 [main] INFO  Esercizio_1 - even index: 2, element: 75
+19:40:45.726 [main] INFO  Esercizio_1 - even index: 4, element: 25
+19:40:45.726 [main] INFO  Esercizio_1 - odd index: 1, element: 33
+19:40:45.726 [main] INFO  Esercizio_1 - odd index: 3, element: 66
+19:41:56.243 [main] INFO  Esercizio_1 - Inserisci numero di valore: 
+19:41:58.396 [main] INFO  Esercizio_1 - Random numbers: [55, 21, 24, 94, 70]
+19:41:58.398 [main] INFO  Esercizio_1 - even index:55
+19:41:58.398 [main] INFO  Esercizio_1 - even index:24
+19:41:58.398 [main] INFO  Esercizio_1 - even index:70
+19:41:58.398 [main] INFO  Esercizio_1 - odd index:21
+19:41:58.398 [main] INFO  Esercizio_1 - odd index:94
+19:42:26.122 [main] INFO  Esercizio_1 - Inserisci numero di valore: 
+19:42:33.172 [main] INFO  Esercizio_1 - Random numbers: [57, 76, 19, 16, 2]
+19:42:40.045 [main] INFO  Esercizio_1 - Inserisci numero di valore: 
+19:42:41.204 [main] INFO  Esercizio_1 - Random numbers: [81, 51, 19, 17, 46]
+19:43:01.359 [main] INFO  Esercizio_1 - Inserisci numero di valore: 
+19:43:02.532 [main] INFO  Esercizio_1 - Random numbers: [62, 90, 19, 42, 96]
+19:43:08.436 [main] INFO  Esercizio_1 - Inserisci numero di valore: 
+19:43:12.506 [main] INFO  Esercizio_1 - Inserisci numero di valore: 
+19:43:13.788 [main] INFO  Esercizio_1 - Random numbers: [57, 11]
+19:43:13.790 [main] INFO  Esercizio_1 - even index:57
+19:43:13.791 [main] INFO  Esercizio_1 - odd index:11
+19:43:43.494 [main] INFO  Esercizio_1 - Inserisci numero di valore: 
+19:43:45.564 [main] INFO  Esercizio_1 - Random numbers: [45, 21, 33, 43, 66]
+19:43:45.566 [main] INFO  Esercizio_1 - even index:45
+19:43:45.566 [main] INFO  Esercizio_1 - even index:33
+19:43:45.566 [main] INFO  Esercizio_1 - even index:66
+19:43:45.566 [main] INFO  Esercizio_1 - even index:21
+19:43:45.566 [main] INFO  Esercizio_1 - even index:43
+19:44:20.805 [main] INFO  Esercizio_1 - Inserisci numero di valore: 
+19:48:50.303 [main] INFO  Esercizio_1 - Inserisci numero di valore: 
+19:48:52.419 [main] INFO  Esercizio_1 - Random numbers: [83, 12, 1, 98, 35]
+19:48:52.421 [main] INFO  Esercizio_1 - even index:83
+19:48:52.422 [main] INFO  Esercizio_1 - even index:1
+19:48:52.422 [main] INFO  Esercizio_1 - even index:35
+19:48:52.422 [main] INFO  Esercizio_1 - even index:12
+19:48:52.422 [main] INFO  Esercizio_1 - even index:98
+19:49:38.675 [main] INFO  Esercizio_1 - Inserisci numero di valore: 
+19:49:40.131 [main] INFO  Esercizio_1 - Random numbers: [91, 57, 93, 45]
+19:49:40.133 [main] INFO  Esercizio_1 - even index:91
+19:49:40.133 [main] INFO  Esercizio_1 - even index:93
+19:49:40.133 [main] INFO  Esercizio_1 - even index:57
+19:49:40.133 [main] INFO  Esercizio_1 - even index:45
+19:49:56.168 [main] INFO  Esercizio_1 - Inserisci numero di valore: 
+19:49:57.243 [main] INFO  Esercizio_1 - Random numbers: [25, 49, 88, 14]
+19:49:57.245 [main] INFO  Esercizio_1 - even index:25
+19:49:57.245 [main] INFO  Esercizio_1 - even index:88
+19:49:57.245 [main] INFO  Esercizio_1 - odd index:49
+19:49:57.245 [main] INFO  Esercizio_1 - odd index:14
+19:50:25.413 [main] INFO  Esercizio_1 - Inserisci numero di valore: 
+19:50:27.283 [main] INFO  Esercizio_1 - Random numbers: [14, 45, 1, 51]
+19:50:27.285 [main] INFO  Esercizio_1 - even index:14
+19:50:27.285 [main] INFO  Esercizio_1 - even index:1
+19:50:27.285 [main] INFO  Esercizio_1 - odd index:45
+19:50:27.285 [main] INFO  Esercizio_1 - odd index:51
