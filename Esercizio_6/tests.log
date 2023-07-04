@@ -218,3 +218,67 @@
 15:35:25.447 [main] INFO  Esercizio_2 - Risultato: 66
 15:35:34.221 [main] INFO  Esercizio_2 - Risultato: 0
 15:37:24.513 [main] INFO  Esercizio_2 - Risultato: 0.0
+17:33:37.747 [main] INFO  Random - Random numbers: [2, 1, 1, 3, 3]
+17:33:37.760 [main] INFO  Random - Inserire un numero alla posizione 3
+17:33:39.165 [main] INFO  Random - Random numbers: [2, 9, 9, 9, 4]
+17:33:39.178 [main] INFO  Random - Inserire un numero alla posizione 3
+17:42:55.205 [main] INFO  Random - Random numbers: [3, 5, 2, 2, 1]
+17:42:55.214 [main] INFO  Random - Inserire un numero alla posizione 3
+17:43:03.545 [main] INFO  Random - Random numbers: [3, 5, 2, 2, 3]
+17:43:03.546 [main] INFO  Random - Random numbers: [3, 3, 3, 2, 1]
+17:43:03.546 [main] INFO  Random - Inserire un numero alla posizione 3
+17:43:10.597 [main] INFO  Random - Random numbers: [3, 7, 6, 4, 3]
+17:43:10.607 [main] INFO  Random - Inserire un numero alla posizione 3
+17:43:13.064 [main] ERROR Random - Index 40 out of bounds for length 5
+17:43:13.065 [main] INFO  Random - Random numbers: [9, 8, 2, 6, 6]
+17:43:13.065 [main] INFO  Random - Inserire un numero alla posizione 3
+17:45:42.787 [main] INFO  Random - Random numbers: [6, 5, 2, 4, 1]
+17:45:42.795 [main] INFO  Random - Inserire un numero alla posizione 3
+17:47:02.133 [main] INFO  Random - Random numbers: [8, 8, 8, 6, 7]
+17:47:02.142 [main] INFO  Random - Scegliere un numero 
+17:47:42.668 [main] INFO  Random - Random numbers: [4, 9, 6, 4, 9]
+17:47:42.677 [main] INFO  Random - Scegliere un numero 
+17:47:44.600 [main] INFO  Random - Dove vuoi inserirlo?
+17:47:50.793 [main] INFO  Random - Random numbers: [4, 9, 6, 3, 9]
+17:47:50.793 [main] INFO  Random - Random numbers: [1, 8, 3, 7, 9]
+17:47:50.793 [main] INFO  Random - Scegliere un numero 
+17:48:02.192 [main] INFO  Random - Dove vuoi inserirlo?
+17:48:07.784 [main] INFO  Random - Random numbers: [3, 8, 3, 7, 9]
+17:48:07.784 [main] INFO  Random - Random numbers: [1, 4, 2, 4, 9]
+17:48:07.784 [main] INFO  Random - Scegliere un numero 
+17:48:16.424 [main] INFO  Random - Dove vuoi inserirlo?
+17:48:24.232 [main] INFO  Random - Random numbers: [1, 4, 2, 4, 9]
+17:48:24.232 [main] INFO  Random - Random numbers: [8, 7, 8, 6, 8]
+17:48:24.232 [main] INFO  Random - Scegliere un numero 
+17:48:32.792 [main] INFO  Random - Dove vuoi inserirlo?
+17:48:36.408 [main] INFO  Random - Random numbers: [8, 7, 8, 6, 60]
+17:48:36.408 [main] INFO  Random - Random numbers: [1, 1, 7, 8, 7]
+17:48:36.408 [main] INFO  Random - Scegliere un numero 
+17:48:40.711 [main] INFO  Random - Dove vuoi inserirlo?
+17:48:59.424 [main] INFO  Random - Fine
+17:49:09.239 [main] INFO  Random - Random numbers: [5, 4, 2, 1, 3]
+17:49:09.247 [main] INFO  Random - Scegliere un numero 
+17:49:10.824 [main] INFO  Random - Dove vuoi inserirlo?
+17:49:12.456 [main] INFO  Random - Fine
+17:49:19.036 [main] INFO  Random - Random numbers: [7, 7, 8, 1, 7]
+17:49:19.046 [main] INFO  Random - Scegliere un numero 
+17:49:32.104 [main] INFO  Random - Dove vuoi inserirlo?
+17:49:34.193 [main] ERROR Random - Index 30 out of bounds for length 5
+17:49:34.193 [main] INFO  Random - Random numbers: [3, 2, 2, 2, 5]
+17:49:34.193 [main] INFO  Random - Scegliere un numero 
+17:51:51.087 [main] INFO  Random - Random numbers: [4, 7, 2, 9, 5]
+17:51:51.095 [main] INFO  Random - Scegliere un numero 
+17:52:00.664 [main] INFO  Random - Dove vuoi inserirlo?
+17:52:04.872 [main] ERROR Random - Caratteri non consentiti!!!
+17:52:04.872 [main] INFO  Random - Random numbers: [5, 4, 4, 9, 3]
+17:52:04.872 [main] INFO  Random - Scegliere un numero 
+09:13:24.515 [main] INFO  Random - Random numbers: [2, 4, 4, 9, 1]
+09:13:24.524 [main] INFO  Random - Scegliere un numero 
+09:13:41.278 [main] ERROR Esercizio_2 - Valore negativo non consentito!!!
+09:13:54.619 [main] ERROR Esercizio_2 - Valore negativo non consentito!!!
+09:14:04.749 [main] ERROR Esercizio_2 - Impossibile dividere per 0!!!
+09:22:40.022 [main] INFO  Esercizio_2 - Risultato: 1.0
+09:22:53.860 [main] ERROR Esercizio_2 - Caratteri non consentiti!!!
+09:22:59.691 [main] INFO  Esercizio_2 - Risultato: 5.0
+09:24:03.549 [main] INFO  Esercizio_2 - Risultato: 20.0
+09:25:16.005 [main] INFO  Esercizio_2 - Risultato: 20.0

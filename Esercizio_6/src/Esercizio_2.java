@@ -30,7 +30,7 @@ public class Esercizio_2 {
 		       double result = a / b;
 		     
 		        
-		        log.info("Risultato: {}", result);
+		        log.info("Risultato:", result);
 		        
 		        
 			}catch(ArithmeticException e) {

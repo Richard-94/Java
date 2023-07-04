@@ -1,0 +1,403 @@
+13:29:59.969 [main] INFO  Main_Project - Running the test method
+13:31:05.517 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+13:31:09.335 [main] INFO  Esercizio_1 - Size: 0
+13:36:43.246 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+13:37:07.135 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+13:37:35.126 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+13:37:37.678 [main] INFO  Esercizio_1 - Size: 0
+13:41:17.584 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+13:41:19.390 [main] INFO  Esercizio_1 - Size: 0
+13:43:13.665 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+13:43:15.942 [main] INFO  Esercizio_1 - Inserisci valore 1: 
+13:43:15.944 [main] INFO  Esercizio_1 - Size: 0
+13:44:41.264 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+13:44:43.846 [main] INFO  Esercizio_1 - Inserisci valore 1: 
+13:44:46.774 [main] INFO  Esercizio_1 - Size: 0
+13:46:04.112 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+13:46:06.517 [main] INFO  Esercizio_1 - Inserisci valore 1: 
+13:46:08.869 [main] INFO  Esercizio_1 - Inserisci valore 2: 
+13:46:11.797 [main] INFO  Esercizio_1 - Size: 1
+13:46:41.607 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+13:46:44.949 [main] INFO  Esercizio_1 - Inserisci valore 1: 
+13:46:47.749 [main] INFO  Esercizio_1 - Inserisci valore 2: 
+13:46:51.772 [main] INFO  Esercizio_1 - Inserisci valore 3: 
+13:46:57.677 [main] INFO  Esercizio_1 - Size: 3
+13:47:04.842 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+13:47:13.461 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+13:47:21.605 [main] INFO  Esercizio_1 - Inserisci valore 1: 
+13:47:25.221 [main] INFO  Esercizio_1 - Inserisci valore 2: 
+13:47:27.341 [main] INFO  Esercizio_1 - Inserisci valore 3: 
+13:47:30.933 [main] INFO  Esercizio_1 - Size: 2
+13:48:46.736 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+13:48:48.813 [main] INFO  Esercizio_1 - Inserisci valore 1: 
+13:48:51.741 [main] INFO  Esercizio_1 - Inserisci valore 2: 
+13:48:54.108 [main] INFO  Esercizio_1 - Inserisci valore 3: 
+13:48:56.109 [main] INFO  Esercizio_1 - Elemento: caa
+13:48:56.110 [main] INFO  Esercizio_1 - Elemento: ciaoo
+13:48:56.110 [main] INFO  Esercizio_1 - Size: 2
+13:50:58.532 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+13:51:00.341 [main] INFO  Esercizio_1 - Inserisci valore 1: 
+13:51:03.253 [main] INFO  Esercizio_1 - Inserisci valore 2: 
+13:51:05.181 [main] INFO  Esercizio_1 - Size: 1
+13:51:26.267 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+13:51:29.701 [main] INFO  Esercizio_1 - Inserisci valore 1: 
+13:51:31.612 [main] INFO  Esercizio_1 - Inserisci valore 2: 
+13:51:32.692 [main] INFO  Esercizio_1 - Inserisci valore 3: 
+13:51:33.836 [main] INFO  Esercizio_1 - Inserisci valore 4: 
+13:51:35.532 [main] INFO  Esercizio_1 - Inserisci valore 5: 
+13:51:38.101 [main] INFO  Esercizio_1 - Size: 4
+13:52:19.604 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+13:52:30.035 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+13:52:31.237 [main] INFO  Esercizio_1 - Inserisci valore 1: 
+13:52:33.085 [main] INFO  Esercizio_1 - Inserisci valore 2: 
+13:52:34.405 [main] INFO  Esercizio_1 - Inserisci valore 3: 
+13:52:35.260 [main] INFO  Esercizio_1 - Elemento: c
+13:52:35.261 [main] INFO  Esercizio_1 - Elemento: ciaoo
+13:52:35.261 [main] INFO  Esercizio_1 - Size: 2
+13:52:59.409 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+13:53:07.285 [main] INFO  Esercizio_1 - Inserisci valore 1: 
+13:53:09.197 [main] INFO  Esercizio_1 - Elemento: ciaoo
+13:53:09.197 [main] INFO  Esercizio_1 - Size: 1
+13:53:15.890 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+13:53:17.437 [main] INFO  Esercizio_1 - Inserisci valore 1: 
+13:53:19.413 [main] INFO  Esercizio_1 - Inserisci valore 2: 
+13:53:21.172 [main] INFO  Esercizio_1 - Inserisci valore 3: 
+13:53:22.308 [main] INFO  Esercizio_1 - Inserisci valore 4: 
+13:53:24.996 [main] INFO  Esercizio_1 - Inserisci valore 5: 
+13:53:30.220 [main] INFO  Esercizio_1 - Elemento: ac
+13:53:30.221 [main] INFO  Esercizio_1 - Elemento: c
+13:53:30.221 [main] INFO  Esercizio_1 - Elemento: co
+13:53:30.221 [main] INFO  Esercizio_1 - Elemento: ciaoo
+13:53:30.221 [main] INFO  Esercizio_1 - Size: 4
+13:53:46.387 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+13:53:49.773 [main] INFO  Esercizio_1 - Inserisci valore 1: 
+13:53:51.781 [main] INFO  Esercizio_1 - Inserisci valore 2: 
+13:53:54.292 [main] INFO  Esercizio_1 - Inserisci valore 3: 
+13:53:55.260 [main] INFO  Esercizio_1 - Elementi duplicati: da
+13:53:55.261 [main] INFO  Esercizio_1 - Elementi duplicati: ciaoo
+13:53:55.261 [main] INFO  Esercizio_1 - Size: 2
+13:54:11.452 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+13:54:22.508 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+13:54:25.221 [main] INFO  Esercizio_1 - Inserisci valore 1: 
+13:54:27.252 [main] INFO  Esercizio_1 - Inserisci valore 2: 
+13:54:29.108 [main] INFO  Esercizio_1 - Inserisci valore 3: 
+13:54:31.540 [main] INFO  Esercizio_1 - Inserisci valore 4: 
+13:54:33.476 [main] INFO  Esercizio_1 - Inserisci valore 5: 
+13:54:35.500 [main] INFO  Esercizio_1 - Elementi duplicati: add
+13:54:35.501 [main] INFO  Esercizio_1 - Elementi duplicati: ad
+13:54:35.501 [main] INFO  Esercizio_1 - Elementi duplicati: ciaoo
+13:56:29.798 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+13:56:32.684 [main] INFO  Esercizio_1 - Inserisci valore 1: 
+13:56:34.459 [main] INFO  Esercizio_1 - Inserisci valore 2: 
+13:56:35.891 [main] INFO  Esercizio_1 - Inserisci valore 3: 
+13:56:36.779 [main] INFO  Esercizio_1 - Elementi duplicati: a
+13:56:36.780 [main] INFO  Esercizio_1 - Elementi duplicati: ciaoo
+13:59:56.805 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+13:59:59.116 [main] INFO  Esercizio_1 - Inserisci valore 1: 
+14:00:00.987 [main] INFO  Esercizio_1 - Inserisci valore 2: 
+14:00:03.332 [main] INFO  Esercizio_1 - Inserisci valore 3: 
+14:00:21.193 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+14:00:23.580 [main] INFO  Esercizio_1 - Inserisci valore 1: 
+14:00:25.299 [main] INFO  Esercizio_1 - Inserisci valore 2: 
+14:00:27.683 [main] INFO  Esercizio_1 - Inserisci valore 3: 
+14:01:16.279 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+14:01:17.644 [main] INFO  Esercizio_1 - Inserisci valore 1: 
+14:01:18.963 [main] INFO  Esercizio_1 - Inserisci valore 2: 
+14:01:19.923 [main] INFO  Esercizio_1 - Inserisci valore 3: 
+14:01:22.692 [main] INFO  Esercizio_1 - Elementi duplicati: ss
+14:01:22.692 [main] INFO  Esercizio_1 - Elementi duplicati: sss
+14:01:22.692 [main] INFO  Esercizio_1 - Elementi duplicati: ssssss
+14:08:35.568 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+14:08:44.671 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+14:08:51.463 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+14:08:52.963 [main] INFO  Esercizio_1 - Inserisci valore 1: 
+14:08:55.443 [main] INFO  Esercizio_1 - Inserisci valore 2: 
+14:08:57.338 [main] INFO  Esercizio_1 - Inserisci valore 3: 
+14:08:59.539 [main] INFO  Esercizio_1 - Elementi duplicati: []
+14:09:17.621 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+14:09:24.510 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+14:09:27.307 [main] INFO  Esercizio_1 - Inserisci valore 1: 
+14:09:29.138 [main] INFO  Esercizio_1 - Inserisci valore 2: 
+14:09:30.963 [main] INFO  Esercizio_1 - Inserisci valore 3: 
+14:09:33.042 [main] INFO  Esercizio_1 - Elementi duplicati: []
+14:09:33.043 [main] INFO  Esercizio_1 - Elementi duplicati: []
+14:09:44.134 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+14:09:50.647 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+14:09:52.179 [main] INFO  Esercizio_1 - Inserisci valore 1: 
+14:09:54.018 [main] INFO  Esercizio_1 - Inserisci valore 2: 
+14:09:55.747 [main] INFO  Esercizio_1 - Inserisci valore 3: 
+14:09:57.123 [main] INFO  Esercizio_1 - Elementi duplicati: []
+14:10:13.549 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+14:10:15.163 [main] INFO  Esercizio_1 - Inserisci valore 1: 
+14:10:17.323 [main] INFO  Esercizio_1 - Inserisci valore 2: 
+14:10:18.923 [main] INFO  Esercizio_1 - Inserisci valore 3: 
+14:10:48.414 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+14:10:52.843 [main] INFO  Esercizio_1 - Inserisci valore 1: 
+14:10:54.323 [main] INFO  Esercizio_1 - Inserisci valore 2: 
+14:10:55.899 [main] INFO  Esercizio_1 - Inserisci valore 3: 
+14:12:38.817 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+14:12:43.059 [main] INFO  Esercizio_1 - Inserisci valore 1: 
+14:12:44.458 [main] INFO  Esercizio_1 - Inserisci valore 2: 
+14:12:45.259 [main] INFO  Esercizio_1 - Inserisci valore 3: 
+14:12:53.291 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+14:12:57.622 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+14:12:58.771 [main] INFO  Esercizio_1 - Inserisci valore 1: 
+14:13:00.050 [main] INFO  Esercizio_1 - Inserisci valore 2: 
+14:13:00.634 [main] INFO  Esercizio_1 - Inserisci valore 3: 
+14:13:01.363 [main] INFO  Esercizio_1 - Size: 1
+14:13:13.016 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+14:13:17.458 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+14:13:19.155 [main] INFO  Esercizio_1 - Inserisci valore 1: 
+14:13:20.818 [main] INFO  Esercizio_1 - Inserisci valore 2: 
+14:13:22.170 [main] INFO  Esercizio_1 - Inserisci valore 3: 
+14:13:23.411 [main] INFO  Esercizio_1 - Size: 2
+14:13:37.468 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+14:13:39.107 [main] INFO  Esercizio_1 - Inserisci valore 1: 
+14:13:40.050 [main] INFO  Esercizio_1 - Inserisci valore 2: 
+14:13:40.867 [main] INFO  Esercizio_1 - Inserisci valore 3: 
+14:13:42.075 [main] INFO  Esercizio_1 - Size: 2
+14:14:03.303 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+14:14:04.962 [main] INFO  Esercizio_1 - Inserisci valore 1: 
+14:14:06.786 [main] INFO  Esercizio_1 - Inserisci valore 2: 
+14:14:07.586 [main] INFO  Esercizio_1 - Inserisci valore 3: 
+14:14:08.202 [main] INFO  Esercizio_1 - Size: 2
+14:15:41.803 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+14:15:46.969 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+14:15:48.330 [main] INFO  Esercizio_1 - Inserisci valore 1: 
+14:15:49.282 [main] INFO  Esercizio_1 - Inserisci valore 2: 
+14:15:49.986 [main] INFO  Esercizio_1 - Inserisci valore 3: 
+14:15:50.809 [main] INFO  Esercizio_1 - Size: 1
+14:18:22.609 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+14:18:27.019 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+14:18:28.354 [main] INFO  Esercizio_1 - Inserisci valore 1: 
+14:18:29.146 [main] INFO  Esercizio_1 - Inserisci valore 2: 
+14:18:30.665 [main] INFO  Esercizio_1 - Inserisci valore 3: 
+14:18:31.561 [main] INFO  Esercizio_1 - Size: 3
+14:18:31.562 [main] INFO  Esercizio_1 - Elements in duplicati: []
+14:18:43.158 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+14:18:46.836 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+14:18:48.378 [main] INFO  Esercizio_1 - Inserisci valore 1: 
+14:18:49.257 [main] INFO  Esercizio_1 - Inserisci valore 2: 
+14:18:49.946 [main] INFO  Esercizio_1 - Inserisci valore 3: 
+14:18:50.898 [main] INFO  Esercizio_1 - Size: 2
+14:18:50.898 [main] INFO  Esercizio_1 - Elements in duplicati: []
+14:21:18.120 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+14:21:24.556 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+14:21:27.361 [main] INFO  Esercizio_1 - Inserisci valore 1: 
+14:21:28.146 [main] INFO  Esercizio_1 - Inserisci valore 2: 
+14:21:28.833 [main] INFO  Esercizio_1 - Inserisci valore 3: 
+14:21:29.450 [main] INFO  Esercizio_1 - Size: 1
+14:21:29.450 [main] INFO  Esercizio_1 - Elements in duplicati: []
+14:21:36.158 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+14:21:37.778 [main] INFO  Esercizio_1 - Inserisci valore 1: 
+14:21:39.873 [main] INFO  Esercizio_1 - Inserisci valore 2: 
+14:21:41.033 [main] INFO  Esercizio_1 - Inserisci valore 3: 
+14:21:41.658 [main] INFO  Esercizio_1 - Size: 2
+14:21:41.658 [main] INFO  Esercizio_1 - Elements in duplicati: []
+14:23:07.001 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+14:23:08.802 [main] INFO  Esercizio_1 - Inserisci valore 1: 
+14:23:10.985 [main] INFO  Esercizio_1 - Inserisci valore 2: 
+14:23:11.745 [main] INFO  Esercizio_1 - Inserisci valore 3: 
+14:23:12.266 [main] INFO  Esercizio_1 - Size: 1
+14:23:12.266 [main] INFO  Esercizio_1 - Elements in duplicati: []
+14:23:56.568 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+14:23:59.505 [main] INFO  Esercizio_1 - Inserisci valore 1: 
+14:24:00.514 [main] INFO  Esercizio_1 - Inserisci valore 2: 
+14:24:01.288 [main] INFO  Esercizio_1 - Inserisci valore 3: 
+14:24:01.865 [main] INFO  Esercizio_1 - Size: 1
+14:24:01.865 [main] INFO  Esercizio_1 - Elements in duplicati: []
+14:25:02.532 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+14:25:03.849 [main] INFO  Esercizio_1 - Inserisci valore 1: 
+14:25:04.569 [main] INFO  Esercizio_1 - Inserisci valore 2: 
+14:25:05.097 [main] INFO  Esercizio_1 - Inserisci valore 3: 
+14:25:05.689 [main] INFO  Esercizio_1 - Size: 1
+14:25:05.689 [main] INFO  Esercizio_1 - Elements in duplicati: []
+14:25:40.953 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+14:25:43.233 [main] INFO  Esercizio_1 - Inserisci valore 1: 
+14:25:43.969 [main] INFO  Esercizio_1 - Inserisci valore 2: 
+14:25:44.433 [main] INFO  Esercizio_1 - Inserisci valore 3: 
+14:25:45.136 [main] INFO  Esercizio_1 - Size: 1
+14:25:45.137 [main] INFO  Esercizio_1 - Elements in duplicati: []
+14:26:14.583 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+14:26:15.985 [main] INFO  Esercizio_1 - Inserisci valore 1: 
+14:26:16.488 [main] INFO  Esercizio_1 - Inserisci valore 2: 
+14:26:16.977 [main] INFO  Esercizio_1 - Inserisci valore 3: 
+14:26:17.480 [main] INFO  Esercizio_1 - Elementi duplicati: s
+14:26:33.940 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+14:26:35.033 [main] INFO  Esercizio_1 - Inserisci valore 1: 
+14:26:37.184 [main] INFO  Esercizio_1 - Inserisci valore 2: 
+14:26:39.168 [main] INFO  Esercizio_1 - Inserisci valore 3: 
+14:26:40.265 [main] INFO  Esercizio_1 - Elementi duplicati: a
+14:26:40.265 [main] INFO  Esercizio_1 - Elementi duplicati: ciaoo
+14:27:05.675 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+14:27:07.633 [main] INFO  Esercizio_1 - Inserisci valore 1: 
+14:27:09.016 [main] INFO  Esercizio_1 - Inserisci valore 2: 
+14:27:09.865 [main] INFO  Esercizio_1 - Inserisci valore 3: 
+14:27:11.312 [main] INFO  Esercizio_1 - Inserisci valore 4: 
+14:27:13.433 [main] INFO  Esercizio_1 - Inserisci valore 5: 
+14:27:16.048 [main] INFO  Esercizio_1 - Elementi duplicati: dd
+14:27:16.049 [main] INFO  Esercizio_1 - Elementi duplicati: a
+14:27:16.049 [main] INFO  Esercizio_1 - Elementi duplicati: ad
+14:27:16.049 [main] INFO  Esercizio_1 - Elementi duplicati: v
+14:27:59.165 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+14:28:07.238 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+14:28:09.089 [main] INFO  Esercizio_1 - Inserisci valore 1: 
+14:28:09.937 [main] INFO  Esercizio_1 - Inserisci valore 2: 
+14:28:10.705 [main] INFO  Esercizio_1 - Inserisci valore 3: 
+14:28:11.673 [main] INFO  Esercizio_1 - Elementi duplicati: ss
+14:28:11.673 [main] INFO  Esercizio_1 - Elementi duplicati: s
+14:29:22.616 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+14:29:23.841 [main] INFO  Esercizio_1 - Inserisci valore 1: 
+14:29:24.496 [main] INFO  Esercizio_1 - Inserisci valore 2: 
+14:29:25.129 [main] INFO  Esercizio_1 - Inserisci valore 3: 
+14:29:26.248 [main] INFO  Esercizio_1 - Elementi duplicati: ccc
+14:29:26.249 [main] INFO  Esercizio_1 - Elementi duplicati: c
+14:30:01.995 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+14:30:03.721 [main] INFO  Esercizio_1 - Inserisci valore 1: 
+14:30:04.312 [main] INFO  Esercizio_1 - Inserisci valore 2: 
+14:30:05.344 [main] INFO  Esercizio_1 - Inserisci valore 3: 
+14:30:05.937 [main] INFO  Esercizio_1 - Elementi non duplicati: ss
+14:30:05.937 [main] INFO  Esercizio_1 - Elementi non duplicati: s
+14:31:09.481 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+14:31:11.193 [main] INFO  Esercizio_1 - Inserisci valore 1: 
+14:31:11.793 [main] INFO  Esercizio_1 - Inserisci valore 2: 
+14:31:12.353 [main] INFO  Esercizio_1 - Inserisci valore 3: 
+14:31:26.989 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+14:31:28.041 [main] INFO  Esercizio_1 - Inserisci valore 1: 
+14:31:28.536 [main] INFO  Esercizio_1 - Inserisci valore 2: 
+14:31:29.504 [main] INFO  Esercizio_1 - Inserisci valore 3: 
+14:31:30.057 [main] INFO  Esercizio_1 - Elementi non duplicati: ss
+14:31:30.057 [main] INFO  Esercizio_1 - Elementi non duplicati: s
+14:31:54.389 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+14:31:56.025 [main] INFO  Esercizio_1 - Inserisci valore 1: 
+14:31:56.528 [main] INFO  Esercizio_1 - Inserisci valore 2: 
+14:31:57.193 [main] INFO  Esercizio_1 - Inserisci valore 3: 
+14:31:57.585 [main] INFO  Esercizio_1 - Elementi non duplicati: ss
+14:31:57.585 [main] INFO  Esercizio_1 - Elementi non duplicati: s
+14:32:10.134 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+14:32:14.831 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+14:32:15.825 [main] INFO  Esercizio_1 - Inserisci valore 1: 
+14:32:16.481 [main] INFO  Esercizio_1 - Inserisci valore 2: 
+14:32:17.073 [main] INFO  Esercizio_1 - Inserisci valore 3: 
+14:32:17.913 [main] INFO  Esercizio_1 - Elementi non duplicati: [Ljava.lang.Object;@2a5c8d3f
+14:32:17.913 [main] INFO  Esercizio_1 - Elementi non duplicati: [Ljava.lang.Object;@2a5c8d3f
+14:41:38.820 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+14:41:41.280 [main] INFO  Esercizio_1 - Inserisci valore 1: 
+14:41:42.991 [main] INFO  Esercizio_1 - Inserisci valore 2: 
+14:41:43.663 [main] INFO  Esercizio_1 - Inserisci valore 3: 
+14:41:44.280 [main] INFO  Esercizio_1 - Elementi duplicati: ss
+14:41:44.280 [main] INFO  Esercizio_1 - Elementi duplicati: s
+14:42:10.354 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+14:42:11.736 [main] INFO  Esercizio_1 - Inserisci valore 1: 
+14:42:12.519 [main] INFO  Esercizio_1 - Inserisci valore 2: 
+14:42:13.064 [main] INFO  Esercizio_1 - Inserisci valore 3: 
+14:42:13.655 [main] INFO  Esercizio_1 - Elementi duplicati: ss
+14:42:13.656 [main] INFO  Esercizio_1 - Elementi duplicati: s
+14:42:33.791 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+14:42:39.192 [main] INFO  Esercizio_1 - Inserisci valore 1: 
+14:42:39.831 [main] INFO  Esercizio_1 - Inserisci valore 2: 
+14:42:40.392 [main] INFO  Esercizio_1 - Inserisci valore 3: 
+14:42:40.983 [main] INFO  Esercizio_1 - Elementi non duplicati: 
+14:42:50.110 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+14:42:54.038 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+14:42:55.064 [main] INFO  Esercizio_1 - Inserisci valore 1: 
+14:42:56.767 [main] INFO  Esercizio_1 - Inserisci valore 2: 
+14:42:57.471 [main] INFO  Esercizio_1 - Inserisci valore 3: 
+14:42:58.183 [main] INFO  Esercizio_1 - Elementi non duplicati: 
+14:42:58.183 [main] INFO  Esercizio_1 - Elementi non duplicati: 
+14:43:15.832 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+14:43:18.104 [main] INFO  Esercizio_1 - Inserisci valore 1: 
+14:43:18.655 [main] INFO  Esercizio_1 - Inserisci valore 2: 
+14:43:19.182 [main] INFO  Esercizio_1 - Inserisci valore 3: 
+14:43:19.943 [main] INFO  Esercizio_1 - Elementi non duplicati: 
+14:43:19.944 [main] INFO  Esercizio_1 - Elementi non duplicati: 
+14:43:42.431 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+14:43:46.236 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+14:43:47.352 [main] INFO  Esercizio_1 - Inserisci valore 1: 
+14:43:48.295 [main] INFO  Esercizio_1 - Inserisci valore 2: 
+14:43:48.807 [main] INFO  Esercizio_1 - Inserisci valore 3: 
+14:43:49.471 [main] INFO  Esercizio_1 - Elementi non duplicati: 
+14:43:49.472 [main] INFO  Esercizio_1 - Elementi non duplicati: 
+14:44:08.975 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+14:44:10.343 [main] INFO  Esercizio_1 - Inserisci valore 1: 
+14:44:11.038 [main] INFO  Esercizio_1 - Inserisci valore 2: 
+14:44:11.518 [main] INFO  Esercizio_1 - Inserisci valore 3: 
+14:44:12.606 [main] INFO  Esercizio_1 - Elementi non duplicati: 
+14:44:12.607 [main] INFO  Esercizio_1 - Elementi non duplicati: 
+14:44:29.955 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+14:44:31.551 [main] INFO  Esercizio_1 - Inserisci valore 1: 
+14:44:32.127 [main] INFO  Esercizio_1 - Inserisci valore 2: 
+14:44:32.686 [main] INFO  Esercizio_1 - Inserisci valore 3: 
+14:44:33.758 [main] INFO  Esercizio_1 - Elementi non duplicati: sss
+14:44:33.759 [main] INFO  Esercizio_1 - Elementi non duplicati: s
+14:45:45.763 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+14:45:50.055 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+14:45:51.775 [main] INFO  Esercizio_1 - Inserisci valore 1: 
+14:45:52.463 [main] INFO  Esercizio_1 - Inserisci valore 2: 
+14:45:52.998 [main] INFO  Esercizio_1 - Inserisci valore 3: 
+14:45:53.486 [main] INFO  Esercizio_1 - Elementi non duplicati: 
+14:45:53.487 [main] INFO  Esercizio_1 - Elementi non duplicati: 
+14:46:01.542 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+14:46:02.775 [main] INFO  Esercizio_1 - Inserisci valore 1: 
+14:46:03.422 [main] INFO  Esercizio_1 - Inserisci valore 2: 
+14:46:03.998 [main] INFO  Esercizio_1 - Inserisci valore 3: 
+14:46:04.495 [main] INFO  Esercizio_1 - Elementi non duplicati: s
+14:46:04.495 [main] INFO  Esercizio_1 - Elementi non duplicati: s
+14:46:57.704 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+14:46:59.599 [main] INFO  Esercizio_1 - Inserisci valore 1: 
+14:47:01.391 [main] INFO  Esercizio_1 - Elementi duplicati: s
+14:47:29.068 [main] INFO  Esercizio_1 - Inserisci numero di valori: 
+14:56:43.837 [main] INFO  Esercizio_1 - Inserisci numero di valore: 
+14:57:37.077 [main] INFO  Esercizio_1 - Inserisci numero di valore: 
+14:57:38.630 [main] INFO  Esercizio_1 - Random numbers: [98, 27, 100]
+14:57:43.350 [main] INFO  Esercizio_1 - Inserisci numero di valore: 
+14:57:46.446 [main] INFO  Esercizio_1 - Random numbers: [71, 57, 5, 100, 35, 1, 75, 1, 95, 38, 94, 57, 15, 7, 91, 85, 44, 55, 83, 66]
+14:58:03.466 [main] INFO  Esercizio_1 - Inserisci numero di valore: 
+14:58:05.630 [main] INFO  Esercizio_1 - Random numbers: [30, 21, 12, 3, 42]
+15:20:25.863 [main] INFO  Esercizio_1 - Inserisci numero di valore: 
+15:20:35.206 [main] INFO  Esercizio_1 - Inserisci numero di valore: 
+15:20:36.732 [main] INFO  Esercizio_1 - Random numbers: [24, 37, 14]
+15:24:06.643 [main] INFO  Esercizio_1 - Inserisci numero di valore: 
+15:24:08.412 [main] INFO  Esercizio_1 - Random numbers: [59, 26, 34]
+15:29:00.172 [main] INFO  Esercizio_1 - Inserisci numero di valore: 
+15:29:02.299 [main] INFO  Esercizio_1 - Random numbers: [29, 26, 89, 74, 69]
+15:29:02.301 [main] INFO  Esercizio_1 - Inverted numbers: [69, 74, 89, 26, 29]
+15:43:23.554 [main] INFO  Esercizio_1 - Inserisci numero di valore: 
+15:43:25.178 [main] INFO  Esercizio_1 - Random numbers: [37, 90, 31]
+15:43:25.180 [main] INFO  Esercizio_1 - Inverted numbers: [31, 90, 37]
+15:45:19.866 [main] INFO  Esercizio_1 - Inserisci numero di valore: 
+15:45:22.138 [main] INFO  Esercizio_1 - Random numbers: [29, 39, 18]
+15:45:22.140 [main] INFO  Esercizio_1 - Inverted numbers: [18, 39, 29]
+15:45:22.141 [main] INFO  Esercizio_1 - Inserisci numero di valore: 
+15:45:36.426 [main] INFO  Esercizio_1 - Random numbers: [39, 35, 42]
+15:46:53.954 [main] INFO  Esercizio_1 - Inserisci numero di valore: 
+15:46:56.065 [main] INFO  Esercizio_1 - Random numbers: [88, 43, 2, 60, 32]
+15:46:56.068 [main] INFO  Esercizio_1 - Inverted numbers: [32, 60, 2, 43, 88]
+15:46:56.068 [main] INFO  Esercizio_1 - Inserisci numero di valore: 
+15:47:10.113 [main] INFO  Esercizio_1 - Random numbers: [77, 74, 54, 17, 71, 73, 47, 4, 40, 45, 75, 90, 65, 24, 17, 47, 45, 69, 52, 31, 9, 18, 43, 49, 68, 48, 73, 16, 52, 95, 47, 38, 2, 100, 56, 82, 10, 87, 74, 68, 86, 48, 42]
+15:47:57.493 [main] INFO  Esercizio_1 - Inserisci numero di valore: 
+15:47:59.641 [main] INFO  Esercizio_1 - Random numbers: [8, 79, 61, 24, 51]
+15:47:59.643 [main] INFO  Esercizio_1 - Inverted numbers: [51, 24, 61, 79, 8]
+15:47:59.643 [main] INFO  Esercizio_1 - Inserisci numero di valore: 
+15:48:01.809 [main] INFO  Esercizio_1 - Random numbers: [73, 44, 15]
+15:48:32.663 [main] INFO  Esercizio_1 - Inserisci numero di valore: 
+15:48:34.865 [main] INFO  Esercizio_1 - Random numbers: [30, 0, 25, 30, 39]
+15:48:34.867 [main] INFO  Esercizio_1 - Inverted numbers: [39, 30, 25, 0, 30]
+15:48:34.868 [main] INFO  Esercizio_1 - Inserisci numero di valore: 
+15:48:36.793 [main] INFO  Esercizio_1 - Random numbers: [27, 77, 60]
+15:49:15.291 [main] INFO  Esercizio_1 - Inserisci numero di valore: 
+15:49:21.785 [main] INFO  Esercizio_1 - Random numbers: [59, 65, 25]
+15:49:21.787 [main] INFO  Esercizio_1 - Inverted numbers: [25, 65, 59]
+15:49:21.787 [main] INFO  Esercizio_1 - Inserisci numero di valore: 
+15:49:23.913 [main] INFO  Esercizio_1 - Random numbers: [25, 16, 29]
+15:49:40.051 [main] INFO  Esercizio_1 - Inserisci numero di valore: 
+15:49:42.161 [main] INFO  Esercizio_1 - Random numbers: [52, 51, 18]
+15:51:54.618 [main] INFO  Esercizio_1 - Inserisci numero di valore: 
+15:51:56.881 [main] INFO  Esercizio_1 - Random numbers: [62, 23, 27, 65, 94]
+15:51:56.883 [main] INFO  Esercizio_1 - Inverted numbers: [62, 94]
+15:52:51.790 [main] INFO  Esercizio_1 - Inserisci numero di valore: 
+15:52:53.617 [main] INFO  Esercizio_1 - Random numbers: [8, 74, 79]
+15:52:53.619 [main] INFO  Esercizio_1 - even/odd: [8, 74]
+15:53:01.681 [main] INFO  Esercizio_1 - Inserisci numero di valore: 
+15:53:05.337 [main] INFO  Esercizio_1 - Random numbers: [82, 55, 97, 44, 42, 22, 77, 59, 92, 35, 33, 95, 79, 96, 97, 97, 55, 82, 55, 51, 21, 46, 35, 57, 61, 17, 6, 64, 3, 100]
+15:53:05.339 [main] INFO  Esercizio_1 - even/odd: [82, 44, 42, 22, 92, 96, 82, 46, 6, 64, 100]

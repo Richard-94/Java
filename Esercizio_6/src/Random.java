@@ -1,5 +1,5 @@
 
-import java.util.Arrays;
+
 import java.util.Scanner;
 
 import org.slf4j.Logger;
@@ -26,21 +26,23 @@ public class Random {
 
 					log.info("Random numbers: {}",  randomNumber);
 
-					log.info("Inserire un numero alla posizione 3");
+					log.info("Scegliere un numero ");
 					
 					int scelta = Integer.parseInt(sc.nextLine());
+					log.info("Dove vuoi inserirlo?");
+					int pos = 	Integer.parseInt(sc.nextLine());
 					if(scelta == uscita) {
 						log.info("Fine");
 						break;
 					}
 					
-					randomNumber[4]=scelta;
+					randomNumber[pos]=scelta;
 					
 					
-					log.info("Random numbers: {}",  randomNumber);
+					log.info("Random numbers:",  randomNumber);
 					
 				} catch(ArrayIndexOutOfBoundsException e) {
-					log.error("Posizione non accettabile!!!");
+					log.error(e.getMessage());
 					
 				}catch(NumberFormatException e) {
 					log.error("Caratteri non consentiti!!!");
