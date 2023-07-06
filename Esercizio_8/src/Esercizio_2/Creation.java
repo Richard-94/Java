@@ -5,6 +5,7 @@ package Esercizio_2;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Random;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,6 +17,7 @@ public class Creation implements Runnable {
     private int sum1;
     private int sum2;
     private int sum3;
+    private int[] randomNumbersArray;
 
 	
 	private static Logger log;
@@ -24,6 +26,7 @@ public class Creation implements Runnable {
 	public Creation(int[] numbers) {
 		 this.log = LoggerFactory.getLogger(Creation.class);
 	    this.numbers = numbers;
+	    this.randomNumbersArray = randomNumber();
 	}
 	
 
@@ -41,16 +44,15 @@ public class Creation implements Runnable {
 
 	
 	public static int[] randomNumber() {
-		
-		
+
 		Logger log = LoggerFactory.getLogger( Creation.class);
 
-			java.util.Random random = new java.util.Random();
-			int[] randomNumber = new int[3000];
+			Random random = new Random();
+			int[] randomNumber = new int[10];
 
 				try {
 					for(int i = 0;i<randomNumber.length;i++) {
-							 randomNumber[i] = random.nextInt(3000)+1;	
+							 randomNumber[i] = random.nextInt(10)+1;	
 					}
 
 					log.info("Random numbers: {}",  randomNumber);
@@ -67,11 +69,9 @@ public class Creation implements Runnable {
 				return randomNumber;
 
 		}
-	
-	
-	
-	public static int randomArray1(int[] numbers) {
-			int[] array1 = Arrays.copyOfRange(randomNumber(), 0, 1000);
+
+	public static int randomArray1(int[] randomNumbersArray) {
+			int[] array1 = Arrays.copyOfRange(randomNumbersArray, 0, 2);
 			 log.info("length: {}", array1.length);
 			
 			//log.info("Random numbers: {}", Arrays.toString(array1));
@@ -85,8 +85,8 @@ public class Creation implements Runnable {
 		
 		}
 	
-	public static int randomArray2(int[] numbers) {
-		int[] array2 = Arrays.copyOfRange(randomNumber(), 1001, 2000);
+	public static int randomArray2(int[] randomNumbersArray) {
+		int[] array2 = Arrays.copyOfRange(randomNumbersArray, 2, 5);
 		log.info("length: {}", array2.length);
 		int sum = 0;
 		int i;
@@ -98,8 +98,8 @@ public class Creation implements Runnable {
 	
 	}
 	 
-	public static int randomArray3(int[] numbers) {
-		int[] array3 = Arrays.copyOfRange(randomNumber(), 2001, 3000);
+	public static int randomArray3(int[] randomNumbersArray) {
+		int[] array3 = Arrays.copyOfRange(randomNumbersArray, 5, 10);
 		log.info("length: {}", array3.length);
 		int sum = 0;
 		int i;
@@ -120,9 +120,9 @@ public class Creation implements Runnable {
 		 
 	@Override
 	public void run() {
-		 	 sum1 = randomArray1(numbers);
-		     sum2 = randomArray2(numbers);
-		     sum3 = randomArray3(numbers);
+		 	 sum1 = randomArray1(randomNumbersArray);
+		     sum2 = randomArray2(randomNumbersArray);
+		     sum3 = randomArray3(randomNumbersArray);
 		   
 	}
 

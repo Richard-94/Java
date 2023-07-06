@@ -11,9 +11,9 @@ public class Main_Project {
 	public static void main(String[] args) {
 		  int[] randomNumber = Creation.randomNumber();
 
-		    Creation prova1 = new Creation(randomNumber);
-		    Creation prova2 = new Creation(randomNumber);
-		    Creation prova3 = new Creation(randomNumber);
+		  Creation prova1 = new Creation(randomNumber);
+		  Creation prova2 = new Creation(randomNumber);
+		  Creation prova3 = new Creation(randomNumber);
 
 		    Thread pro1 = new Thread(prova1);
 		    Thread pro2 = new Thread(prova2);
