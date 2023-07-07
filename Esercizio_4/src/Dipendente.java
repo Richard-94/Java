@@ -8,7 +8,7 @@ public class Dipendente {
 	
 	
 	public Dipendente(String matricola, double stipendio, double importoOrarioStraordinario, Livello livello,
-			Department dipartimento) {
+		Department dipartimento) {
 		
 		this.matricola = matricola;
 		this.stipendio = 1000;

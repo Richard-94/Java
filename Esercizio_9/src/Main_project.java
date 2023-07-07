@@ -50,7 +50,7 @@ public class Main_project {
 		Prodotti pro3 = new Prodotti(25869, "Available", orderDate3, deliveryDate3, products, cust3, "Pampers", "Baby", 90);
 		Prodotti pro4 = new Prodotti(14552, "Non-Available", orderDate4, deliveryDate4, products, cust4, "Pampers", "Baby", 150);
 		Prodotti pro5 = new Prodotti(54141, "Non-Available", orderDate5, deliveryDate5, products, cust5, "Maglietta", "Boys", 50);
-		Prodotti pro6 = new Prodotti(239, "Available", orderDate6, deliveryDate6, products, cust6, "Jeans", "Boys", 60);
+		Prodotti pro6 = new Prodotti(239, "Available", orderDate6, deliveryDate2, products, cust6, "Jeans", "Boys",12);
 		
 		
 		
@@ -67,13 +67,13 @@ public class Main_project {
 			    .filter(el -> el.getCategory().equals("Books"))
 			    .filter(el -> el.getPrice() > 100) 
 			    .collect(Collectors.toList()); 
-		//prod.forEach(show -> log.info("Prodotti: {}", show));
+		prod.forEach(show -> log.info("Prodotti: {}", show));
 		
 		List<Prodotti> prod1=products.stream()
 				.filter(fil->fil.getCategory().equals("Baby"))
 				
 				.collect(Collectors.toList());
-		//prod1.forEach(see->log.info("Prodotti: {}", see));
+		prod1.forEach(see->log.info("Prodotti: {}", see));
 		
 		
 		List<Prodotti> prod2=products.stream()
@@ -85,13 +85,28 @@ public class Main_project {
 				})
 				.collect(Collectors.toList());
 		
-		//prod2.forEach(se->log.info("Prodotti: {}", se));
+		prod2.forEach(se->log.info("Prodotti: {}", se));
 		
 		
 		List<Prodotti> prod3=products.stream()
 				.filter(e->e.getCustomer().getTier().equals(2))
 				.collect(Collectors.toList());
 		prod3.forEach(se->log.info("Prodotti: {}", se.toString()));
+		
+		
+		
+		
+		//log.info("Product 1: id={}, status={}, orderDate={}, deliveryDate={}, name={}, category={}, price={}",
+			   // pro1.getId(), pro1.getStatus(), pro1.getOrderDate(), pro1.getDeliveryDate(),
+			    //pro1.getName(), pro1.getCategory(), pro1.getPrice());
+		prod1.forEach(see->log.info("Prodotti: {}", see));
+		
+		//log.info("Product 1: id={}, status={}, orderDate={}, deliveryDate={}, name={}, category={}, price={}",
+			    //pro2.getId(), pro2.getStatus(), pro2.getOrderDate(), pro2.getDeliveryDate(),
+			    //pro2.getName(), pro2.getCategory(), pro2.getPrice());
+		prod2.forEach(se->log.info("Prodotti: {}", se));
+
+
 
 	}
 	

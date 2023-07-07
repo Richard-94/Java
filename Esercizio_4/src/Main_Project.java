@@ -12,14 +12,7 @@ public class Main_Project {
 		
 	
 		
-		
-		
-		
-		
-		
-		
-		
-		
+	
 		System.out.println(dipendente1);
 		System.out.println(dipendente2);
 		System.out.println(dipendente3);
