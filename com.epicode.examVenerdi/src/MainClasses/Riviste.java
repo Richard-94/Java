@@ -6,8 +6,8 @@ public class Riviste extends Catalogo implements Comparable<Riviste> {
 	private Period period;
 
 
-	public Riviste(String iSBN, String titolo, int anno_pubblicazione2, int pagine, Period period) {
-		super(iSBN, titolo, anno_pubblicazione2, pagine);
+	public Riviste(String isbn, String titolo, int anno_pubblicazione2, int pagine, Period period) {
+		super(isbn, titolo, anno_pubblicazione2, pagine);
 		this.period = period;
 	}
 

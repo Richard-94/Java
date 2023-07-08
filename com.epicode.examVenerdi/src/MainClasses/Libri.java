@@ -16,6 +16,7 @@ public class Libri extends Catalogo {
 	}
 
 
+
 	public String getAutore() {
 		return autore;
 	}
@@ -38,7 +39,7 @@ public class Libri extends Catalogo {
 
 	@Override
 	public String toString() {
-		return "Libri [autore=" + autore + ", genere=" + genere + "]";
+		 return "Libri [ISBN=" +  getISBN() + ", titolo=" + getTitolo() + ",autore=" + getAutore() + ", genere=" + getTitolo() + ", anno_pubblicazione=" + getAnno_pubblicazione() + ", pagine=" + getPagine() +  "]";
 	}
 	
 

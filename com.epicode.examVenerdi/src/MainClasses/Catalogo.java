@@ -3,15 +3,15 @@ package MainClasses;
 
 
 public abstract class Catalogo {
-	private String ISBN;
+	private String isbn;
 	private String titolo;
 	private int anno_pubblicazione;
 	private int pagine;
 	
 	
-	public Catalogo(String iSBN, String titolo, int anno_pubblicazione2, int pagine) {
+	public Catalogo(String isbn, String titolo, int anno_pubblicazione2, int pagine) {
 		super();
-		ISBN = iSBN;
+		this.isbn= isbn;
 		this.titolo = titolo;
 		this.anno_pubblicazione = anno_pubblicazione2;
 		this.pagine = pagine;
@@ -19,14 +19,11 @@ public abstract class Catalogo {
 
 
 	public String getISBN() {
-		return ISBN;
+		return isbn;
 	}
 
 
-	public void setISBN(String iSBN) {
-		ISBN = iSBN;
-	}
-
+	
 
 	public String getTitolo() {
 		return titolo;
