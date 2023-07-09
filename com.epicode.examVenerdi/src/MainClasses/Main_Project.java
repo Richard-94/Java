@@ -2,7 +2,6 @@ package MainClasses;
 
 import java.time.DateTimeException;
 import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.InputMismatchException;
 import java.util.List;
@@ -27,19 +26,15 @@ public class Main_Project {
 		
 		
 		
-	     log.info("Current date: " + currentYear);
+	     //log.info("Current date: " + currentYear);
 	 	//log.info("che cosa vuoi creare?: ");
 		//while(true) {
-			
 			//int choose = sc.nextInt();
-			
 			//switch(choose) {
-			
 			//case 0:
 				//log.info("uscita dal programma");
 				//return;
-			
-			
+	
 			//case 1:
 				///creatRivisti(contenuto);
 				//break;
@@ -58,12 +53,12 @@ public class Main_Project {
 	 	
 	 	creatRivisti(contenuto);
 	 	creatLibri(contenuto);
-	 	//log.info("vuoi rimuovere un isbn?");
-	 	//removeByIsbn(contenuto);
-	 	//log.info("vuoi cercare un isbn?");
-	 	//searchByIsbn(contenuto);
-	 	//log.info("vuoi cercare un anno?");
-	 	//searchByYear(contenuto);
+	 	log.info("vuoi rimuovere un isbn?");
+	 	removeByIsbn(contenuto);
+	 	log.info("vuoi cercare un isbn?");
+	 	searchByIsbn(contenuto);
+	 	log.info("vuoi cercare un anno?");
+	 	searchByYear(contenuto);
 	 	log.info("vuoi cercare un autore?");
 	 	searchByAuthor(contenuto);
 	 	salvaDati(contenuto);
@@ -75,14 +70,13 @@ public class Main_Project {
 	private static void creatRivisti(Set<Catalogo> contenuto)  {
 
 			int numero;
-			log.info("Rivisti invocato");
-			log.info("Quanti Rivisti vuoi inserire: ");
+			log.info("QUANTI RIVISTE VUOI INSERIRE?: ");
 			int num = 0;
 
 			try {
 			 numero = sc.nextInt();
 			 if(numero<0) {
-				 throw new IllegalArgumentException("invalid number");
+				 throw new IllegalArgumentException("NUMERO INVALIDO");
 			 }
 			
 			for(int i = 0; i<numero;i++) {
@@ -91,27 +85,31 @@ public class Main_Project {
 				String isbn = sc.next();
 				sc.nextLine(); 
 				log.info("Inserisci Titolo: ");
-				String titolo = sc.next();
+				String titolo = sc.nextLine();
+
 				log.info("Anno pubblicazione: ");
 				int anno = sc.nextInt();
 				if(anno>currentYear ) {
-					throw new DateTimeException("invalid year");
+					throw new DateTimeException("ANNO INVALIDO");
 				}
 				else if(anno<1000) {
-					throw new HandleError("Anno non puo essere minore di 1000");
+					throw new HandleError("L'ANNO NON PUO' ESSERE MINORE DI 1000");
 				}
 				sc.nextLine(); 
 				log.info("Inserisci Pagine: ");
 				int pag = sc.nextInt();
 				if(pag<0) {
-					throw new IllegalArgumentException("invalid number");
+					throw new IllegalArgumentException("NUMERO INVALIDOS");
 				}
-				log.info("Scegli periodo: ");
+				log.info("Scegli 0:MENSILE, 1:SEMESTRALE:, 2:SETTIMANALE ");
 				for (Period period : Period.values()) {
 					log.info("" + period);
 				}
 	
 				int scegli=sc.nextInt();
+				if(scegli>2) {
+					log.info("LE OPZIONI VANNO DA  0 - 2");
+				}
 				Period periodoScelto = null;
 				switch(scegli) {
 				case 0:
@@ -139,14 +137,14 @@ public class Main_Project {
 			
 	
 		}catch (DateTimeException e) {
-			log.error("Anno deve esseres minore o uguale all'anno corrente ");
+			log.error("L'ANNO DEVE ESSERE MINORE O UGUALE ALL'ANNO CORRENTE");
 		} catch (HandleError e) {
 			log.error(e.getMessage());
 		}
 		catch (IllegalArgumentException e) {
-			log.error("Il numero deve essere positivo");
+			log.error("SOLO NUMERI POSITIVI");
 		}catch (InputMismatchException e) {
-			log.error("Caratteri non consentiti solo numeri positivi");
+			log.error("SOLO NUMERI SONO CONSENTITI");
 		}
 		
 	}
@@ -155,13 +153,13 @@ public class Main_Project {
 		log.info("Libri invocato");
 		int numero;
 		
-		log.info("Quanti Libri vuoi inserire: ");
+		log.info("QUANTI LIBRI VUOI INSERIRE: ");
 		int num = 0;
 
 		try {
 		 numero = sc.nextInt();
 		 if(numero<0) {
-			 throw new IllegalArgumentException("invalid number");
+			 throw new IllegalArgumentException("NUMERO INVALIDO");
 		 }
 		
 		for(int i = 0; i<numero;i++) {
@@ -170,20 +168,21 @@ public class Main_Project {
 			String isbn = sc.next();
 			sc.nextLine(); 
 			log.info("Inserisci Titolo: ");
-			String titolo = sc.next();
+			String titolo = sc.nextLine();
+
 			log.info("Anno pubblicazione: ");
 			int anno = sc.nextInt();
 			if(anno>currentYear ) {
-				throw new DateTimeException("invalid year");
+				throw new DateTimeException("ANNO INVALIDO");
 			}
 			else if(anno<1000) {
-				throw new HandleError("Anno non puo essere minore di 1000");
+				throw new HandleError("L'ANNO NON PUO' ESSERE MINORE DI 1000");
 			}
 			sc.nextLine(); 
 			log.info("Inserisci Pagine: ");
 			int pag = sc.nextInt();
 			if(pag<0) {
-				throw new IllegalArgumentException("invalid number");
+				throw new IllegalArgumentException("NUMERO INVALIDO");
 			}
 			sc.nextLine(); 
 			log.info("Inserisci Autore: ");
@@ -203,14 +202,14 @@ public class Main_Project {
 		}
 		
 		}catch (DateTimeException e) {
-			log.error("Anno deve esseres minore o uguale all'anno corrente ");
+			log.error("L'ANNO DEVE ESSERE MINORE O UGUALE ALL'ANNO CORRENTE");
 		} catch (HandleError e) {
 			log.error(e.getMessage());
 		}
 		catch (IllegalArgumentException e) {
-			log.error("Il numero deve essere positivo");
+			log.error("SOLO NUMERI POSITIVI");
 		}catch (InputMismatchException e) {
-			log.error("Caratteri non consentiti solo numeri positivi");
+			log.error("SOLO NUMERI SONO CONSENTITI");
 		}
 		
 	}
@@ -325,9 +324,9 @@ public class Main_Project {
 	            }
 	        }
 	    } catch (IOException e) {
-	        log.error("Errore durante la lettura del file: " + e.getMessage());
+	        log.error("ERRORE DURANTE LA LETTURA DEL FILE: " + e.getMessage());
 	    } catch (NumberFormatException e) {
-	        log.error("Errore durante il parsing dei valori numerici nel file: " + e.getMessage());
+	        log.error("ERRORE DURANTE IL PARSE DEI VALORI NUMERICI: " + e.getMessage());
 	    }
 
 	    return contenuto;
