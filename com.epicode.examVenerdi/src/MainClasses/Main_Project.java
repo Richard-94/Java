@@ -2,26 +2,29 @@ package MainClasses;
 
 import java.time.DateTimeException;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 import java.util.Set;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
+import java.io.File;
+import java.io.IOException;
 
+import org.apache.commons.io.FileUtils;
 import org.slf4j.LoggerFactory;
-
-
-
 
 
 public class Main_Project {
 	static Scanner sc = new Scanner(System.in);
 	static org.slf4j.Logger log = LoggerFactory.getLogger(Main_Project.class);
 	 static int currentYear = LocalDate.now().getYear();
+	 private static File file = new File("documenti/catalogo.txt");
 
 	public static void main(String[] args) {
 		Set<Catalogo> contenuto = new HashSet<Catalogo>();
+		
 		
 		
 	     log.info("Current date: " + currentYear);
@@ -57,10 +60,15 @@ public class Main_Project {
 	 	creatLibri(contenuto);
 	 	//log.info("vuoi rimuovere un isbn?");
 	 	//removeByIsbn(contenuto);
-	 	log.info("vuoi cercare un isbn?");
+	 	//log.info("vuoi cercare un isbn?");
 	 	//searchByIsbn(contenuto);
-	 	log.info("vuoi cercare un anno?");
-	 	searchByYear(contenuto);
+	 	//log.info("vuoi cercare un anno?");
+	 	//searchByYear(contenuto);
+	 	log.info("vuoi cercare un autore?");
+	 	searchByAuthor(contenuto);
+	 	salvaDati(contenuto);
+	 	contenuto = caricaFile();
+
 	}
 		
 	
@@ -137,7 +145,10 @@ public class Main_Project {
 		}
 		catch (IllegalArgumentException e) {
 			log.error("Il numero deve essere positivo");
+		}catch (InputMismatchException e) {
+			log.error("Caratteri non consentiti solo numeri positivi");
 		}
+		
 	}
 	
 	private static void creatLibri(Set<Catalogo> contenuto) {
@@ -154,7 +165,7 @@ public class Main_Project {
 		 }
 		
 		for(int i = 0; i<numero;i++) {
-			log.info("Crea Revista numero: " + ++num);
+			log.info("Crea Libro numero: " + ++num);
 			log.info("Inserisci codice: ");
 			String isbn = sc.next();
 			sc.nextLine(); 
@@ -182,15 +193,14 @@ public class Main_Project {
 			String gen = sc.next();
 			
 
-			Libri book = new Libri(isbn, titolo, anno, pag, aut,gen);
+			Libri book = new Libri(isbn, titolo, anno, pag,aut,gen);
+			book.setLibro(book);
 			contenuto.add(book);
 			
 		}
 		for (Catalogo catalogo : contenuto) {
 			log.info("Elementi: " + catalogo);
 		}
-		
-	
 		
 		}catch (DateTimeException e) {
 			log.error("Anno deve esseres minore o uguale all'anno corrente ");
@@ -199,8 +209,9 @@ public class Main_Project {
 		}
 		catch (IllegalArgumentException e) {
 			log.error("Il numero deve essere positivo");
+		}catch (InputMismatchException e) {
+			log.error("Caratteri non consentiti solo numeri positivi");
 		}
-		
 		
 	}
 	
@@ -215,14 +226,12 @@ public class Main_Project {
 		}
 	}
 	
-	
 	public static void searchByIsbn(Set<Catalogo> contenuto) {
 		log.info("Inserisci codice: ");
 		String isbn = sc.next();
 		 List<Catalogo> search = contenuto.stream()
 				 .filter(el->el.getISBN().equals(isbn))
 				 .collect(Collectors.toList()); 
-		
 		search.forEach(show -> log.info("Catalogo: {}", show));
 		
 	}
@@ -233,22 +242,96 @@ public class Main_Project {
 		 List<Catalogo> date = contenuto.stream()
 				 .filter(el->el.getAnno_pubblicazione()==data)
 				 .collect(Collectors.toList());
-		
 		date.forEach(show -> log.info("Catalogo: {}", show));
 		
 	}
 	
+	public static void searchByAuthor(Set<Catalogo> contenuto) {
+	    log.info("Inserisci Autore: ");
+	    String info = sc.next();
+	    List<Catalogo> aut = contenuto.stream()
+	            .filter(el -> el instanceof Libri && el.getLibro() != null && ((Libri) el).getAutore().equalsIgnoreCase(info))
+	            .collect(Collectors.toList());
+	    
+	    for (Catalogo catalogo : aut) {
+	        if (catalogo instanceof Libri) {
+	            Libri libro = (Libri) catalogo;
+	            log.info("Elementi: " + libro.getAutore());
+	        } else if (catalogo instanceof Riviste) {
+	            Riviste rivista = (Riviste) catalogo;
+	            log.info("Elementi: Riviste [period=" + rivista.getPeriod() + ", ISBN=" + rivista.getISBN() + ", titolo=" + rivista.getTitolo() + ", anno_pubblicazione=" + rivista.getAnno_pubblicazione() + ", pagine=" + rivista.getPagine() + "]");
+	        }
+	    }
+	    
+	    aut.forEach(show -> log.info("Catalogo: {}", show));
+	}
+
+	public static void salvaDati(Set<Catalogo> contenuto) {
+	    String testo = "";
+	    for (Catalogo items : contenuto) {
+	        testo += "Oggetto: " + 
+	                "Anno pubblicazione: " + items.getAnno_pubblicazione() + ", " +
+	                "ISBN: " + items.getISBN() + " @ " +
+	                "Pagine: " + items.getPagine() + " * " +
+	                "Titolo: " + items.getTitolo() + " # ";
+	        if (items instanceof Libri) {
+	            Libri libro = (Libri) items;
+	            testo += "Autore: " + (libro.getLibro() != null ? libro.getLibro().getAutore() : "N/A") + " / " +
+	                    "Genere: " + (libro.getLibro() != null ? libro.getLibro().getGenere() : "N/A");
+	        }
+	        testo += "\n";
+	    }
+
+	    try {
+	        FileUtils.writeStringToFile(file, testo, "UTF-8", true);
+	        log.info("Testo scritto su file " + file.getPath());
+	    } catch (IOException e) {
+	        log.error("Errore durante la scrittura del file: " + e.getMessage());
+	    }
+	}
+
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	public static Set<Catalogo> caricaFile() {
+	    Set<Catalogo> contenuto = new HashSet<>();
+	    try {
+	        String textFile = FileUtils.readFileToString(file, "UTF-8");
+	        log.info("oggetti " + textFile);
+	        
+	        String[] elementi = textFile.split("_");
+
+	        for (String s : elementi) {
+	            String[] par = s.split("#");
+
+	            if (par.length >= 2) {
+	                String[] values = par[1].split("/");
+	                if (values.length >= 4) {
+	                    String isbn = values[0].trim();
+	                    String titolo = values[1].trim();
+	                    int anno_pubblicazione = Integer.parseInt(values[2].trim());
+	                    int pagine = Integer.parseInt(values[3].trim());
+
+	                    if (par[0].startsWith("Riviste")) {
+	                        Period period = Period.valueOf(values[4].trim());
+	                        Riviste rivista = new Riviste(isbn, titolo, anno_pubblicazione, pagine, period);
+	                        contenuto.add(rivista);
+	                    } else if (par[0].startsWith("Libri")) {
+	                        String autore = values[4].trim();
+	                        String genere = values[5].trim();
+	                        Libri libro = new Libri(isbn, titolo, anno_pubblicazione, pagine, autore, genere);
+	                        contenuto.add(libro);
+	                    }
+	                }
+	            }
+	        }
+	    } catch (IOException e) {
+	        log.error("Errore durante la lettura del file: " + e.getMessage());
+	    } catch (NumberFormatException e) {
+	        log.error("Errore durante il parsing dei valori numerici nel file: " + e.getMessage());
+	    }
+
+	    return contenuto;
+	}
+
 
 }

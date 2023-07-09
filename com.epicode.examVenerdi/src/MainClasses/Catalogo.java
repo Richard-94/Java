@@ -7,6 +7,7 @@ public abstract class Catalogo {
 	private String titolo;
 	private int anno_pubblicazione;
 	private int pagine;
+	private Libri libro;
 	
 	
 	public Catalogo(String isbn, String titolo, int anno_pubblicazione2, int pagine) {
@@ -15,7 +16,10 @@ public abstract class Catalogo {
 		this.titolo = titolo;
 		this.anno_pubblicazione = anno_pubblicazione2;
 		this.pagine = pagine;
+		this.libro = libro;
+		
 	}
+
 
 
 	public String getISBN() {
@@ -24,6 +28,18 @@ public abstract class Catalogo {
 
 
 	
+
+	
+
+	public Libri getLibro() {
+		return libro;
+	}
+
+
+	public void setLibro(Libri libro) {
+		this.libro = libro;
+	}
+
 
 	public String getTitolo() {
 		return titolo;
