@@ -68,7 +68,6 @@ public class Main_Project {
 		
 	
 	private static void creatRivisti(Set<Catalogo> contenuto)  {
-
 			int numero;
 			log.info("QUANTI RIVISTE VUOI INSERIRE?: ");
 			int num = 0;
