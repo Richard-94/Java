@@ -1,6 +1,7 @@
 package com.test.model;
 
 import javax.persistence.Column;
+import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -10,12 +11,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 @Entity
+@DiscriminatorValue("Riviste")
 public class Riviste extends Catalogo {
-	
-	 @ManyToOne
-	 @JoinColumn(name = "catalogo_id")
-	 private User catalogo_reviste;
-	 
 	 @Enumerated(EnumType.STRING)
 	 @Column(name = "period_of_the_riviste")
 	private Period period;
@@ -29,37 +26,25 @@ public class Riviste extends Catalogo {
 	        this.period = period;
 	    }
 
-	
 
-	public User getCatalogo_reviste() {
-		return catalogo_reviste;
-	}
 
-	public void setCatalogo_reviste(User catalogo_reviste) {
-		this.catalogo_reviste = catalogo_reviste;
-	}
 
-	public Period getPeriod() {
+	  public Period getPeriod() {
 		return period;
 	}
 
 	public void setPeriod(Period period) {
 		this.period = period;
 	}
-	
-	
-
-	  public int getLoanDuration() {
-	       
-	        return 30; 
-	    }
-
 
 	@Override
-	public String toString() {
-		return "Riviste [catalogo_reviste=" + catalogo_reviste + ", period=" + period + ", getCatalogo_reviste()="
-				+ getCatalogo_reviste() + ", getPeriod()=" + getPeriod() + "]";
-	}
+	  public String toString() {
+	      return "Riviste [isbn=" + getIsbn() + ", titolo=" + getTitolo() + ", anno_pubblicazione=" + getAnno_pubblicazione()
+	              + ", pagine=" + getPagine() + ", period=" + period + "]";
+	  }
+
+
+
 
 
 }
