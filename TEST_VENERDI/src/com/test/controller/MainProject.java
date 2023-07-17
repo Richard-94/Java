@@ -32,29 +32,35 @@ public class MainProject {
 
     public static void main(String[] args) {
         try {
+        	//CREAZIONE UTENTE
             //Client client = new Client();
            //Set<User> userList = new HashSet<>();
            //client.createUser(userList);
            //saveUser(userList);
 
+        	
+        	//CREAZIONE LIBRI 
             //Magazine magazine = new Magazine();
             //Set<Catalogo> contenuto = new HashSet<>();
             //magazine.creatRivisti(contenuto);
 
-
+        	//CREAZIONE RIVISTI
             //Books book = new Books();
             //Set<Catalogo> contenuto1 = new HashSet<>();
             //book.creatLibri(contenuto1);
 
+        	//SALVARE LIBRI E RIVISTI
             //Set<Catalogo> catalogoSet = new HashSet<>();
             //catalogoSet.addAll(contenuto);
             //catalogoSet.addAll(contenuto1);
            	//saveEvent(catalogoSet);
             
-        	 ReturnItem restitute = new ReturnItem();
-        	List<Lending> lendingList = new ArrayList<>(); 
-            restitute.lendingItem(lendingList);
-            saveLending(lendingList);
+        	
+        	//SALVARE I PRESTITI
+        	//ReturnItem restitute = new ReturnItem();
+        	//List<Lending> lendingList = new ArrayList<>(); 
+            //restitute.lendingItem(lendingList);
+            //saveLending(lendingList);
 
             
         	
