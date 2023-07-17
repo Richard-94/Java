@@ -37,6 +37,9 @@ public class Lending {
 
 	@Column(name = "restitution_date", nullable = false)
 	private LocalDate restitutionDate;
+	
+    @Column(nullable = false)
+    private boolean returned;
 
 	@Column(name = "actual_restitution_date", nullable = false)
 	private LocalDate actualRestitutionDate;
@@ -48,15 +51,17 @@ public class Lending {
         super();
     }
 
-    public Lending(Type type,String isbn, Long cardNumber, LocalDate lendingDate, LocalDate restitutionDate, LocalDate actualRestitutionDate) {
-        super();
-        this.isbn = isbn;
-        this.cardNumber = cardNumber;
-        this.lendingDate = lendingDate;
-        this.restitutionDate = restitutionDate;
-        this.actualRestitutionDate = actualRestitutionDate;
-        this.type = type;
-    }
+	public Lending(String isbn, Long cardNumber, LocalDate lendingDate, LocalDate restitutionDate, boolean returned,
+			LocalDate actualRestitutionDate, Type type) {
+		super();
+		this.isbn = isbn;
+		this.cardNumber = cardNumber;
+		this.lendingDate = lendingDate;
+		this.restitutionDate = restitutionDate;
+		this.returned = returned;
+		this.actualRestitutionDate = actualRestitutionDate;
+		this.type = type;
+	}
 
 	public Long getId() {
 		return id;
@@ -98,6 +103,14 @@ public class Lending {
 		this.restitutionDate = restitutionDate;
 	}
 
+	public boolean isReturned() {
+		return returned;
+	}
+
+	public void setReturned(boolean returned) {
+		this.returned = returned;
+	}
+
 	public LocalDate getActualRestitutionDate() {
 		return actualRestitutionDate;
 	}
@@ -117,10 +130,11 @@ public class Lending {
 	@Override
 	public String toString() {
 		return "Lending [id=" + id + ", isbn=" + isbn + ", cardNumber=" + cardNumber + ", lendingDate=" + lendingDate
-				+ ", restitutionDate=" + restitutionDate + ", actualRestitutionDate=" + actualRestitutionDate
-				+ ", type=" + type + "]";
+				+ ", restitutionDate=" + restitutionDate + ", returned=" + returned + ", actualRestitutionDate="
+				+ actualRestitutionDate + ", type=" + type + "]";
 	}
 
+   
 	
 
 

@@ -51,10 +51,10 @@ public class MainProject {
             //catalogoSet.addAll(contenuto1);
            	//saveEvent(catalogoSet);
             
-        	 //ReturnItem restitute = new ReturnItem();
-        	//List<Lending> lendingList = new ArrayList<>(); 
-            //restitute.lendingItem(lendingList);
-            //saveLending(lendingList);
+        	 ReturnItem restitute = new ReturnItem();
+        	List<Lending> lendingList = new ArrayList<>(); 
+            restitute.lendingItem(lendingList);
+            saveLending(lendingList);
 
             
         	
@@ -88,7 +88,7 @@ public class MainProject {
           //List<Lending> i =readLendedItems(829382253564601729l);
           //log.info ("Elemento" + i);
           
-          findExpiredUnrestitutedLoans();
+          //findExpiredUnrestitutedLoans();
             
 
         } catch (Exception e) {
@@ -223,18 +223,18 @@ public class MainProject {
         return searchList;
     }
     
-    public static List<Lending> findExpiredUnrestitutedLoans() {
-        LocalDate currentDate = LocalDate.now();
-        manageEvent.getTransaction().begin();
-        TypedQuery<Lending> query = manageEvent.createQuery(
-            "SELECT l FROM Lending l WHERE l.returnDate < :currentDate AND l.returned = false",
-            Lending.class
-        );
-        query.setParameter("currentDate", currentDate);
-        List<Lending> searchList = query.getResultList();
-        manageEvent.getTransaction().commit();
-        return searchList;
-    }
+    //public static List<Lending> findExpiredUnrestitutedLoans() {
+       // LocalDate currentDate = LocalDate.now();
+       // manageEvent.getTransaction().begin();
+        //TypedQuery<Lending> query = manageEvent.createQuery(
+            //"SELECT l FROM Lending l WHERE l.returnDate < :currentDate AND l.returned = false",
+            //Lending.class
+        //);
+        //query.setParameter("currentDate", currentDate);
+        //List<Lending> searchList = query.getResultList();
+        //manageEvent.getTransaction().commit();
+        //return searchList;
+    //}
 
 
 
