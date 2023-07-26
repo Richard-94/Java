@@ -15,8 +15,9 @@ public class Menu {
 		return top;
 	}
 
-
-
-
+	@Override
+	public String toString() {
+		return "Menu [menuPizza=" + menuPizza + ", top=" + top + "]";
+	}
 
 }
