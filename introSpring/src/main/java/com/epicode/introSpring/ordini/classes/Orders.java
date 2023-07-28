@@ -17,6 +17,8 @@ import lombok.ToString;
 
 
 
+@Getter
+@Setter
 
 public class Orders {
 	private static Menu menu;
@@ -51,6 +53,8 @@ public class Orders {
         double totalMenuPrice = 0.0;
         for (PizzaBase pizza : menu.getMenuPizza()) {
             totalMenuPrice += pizza.getPrice();
+            
+            
             
             for(Toppings top : menu.getTop()) {
             	totalMenuPrice += top.getPrice();
