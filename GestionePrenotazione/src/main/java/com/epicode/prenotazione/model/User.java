@@ -1,10 +1,18 @@
 package com.epicode.prenotazione.model;
 
+import java.util.List;
+
+import com.epicode.prenotazione.constants.Type;
+import java.util.ArrayList;
+
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -14,17 +22,20 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Data
 @Builder
-@Entity
-public class Building {
+
+@Entity(name = "AppUser")
+public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
 	@Column(nullable = false)
-	private String name;
+	private String userName;
 	@Column(nullable = false)
-	private String address;
-	@Column(nullable = false)
-	private String city;
+	private String fullName;
+	@Column(nullable = false, unique = true)
+	private String email;
+	@ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	private List<Prenotation> prenotation = new ArrayList<>();
 
 }

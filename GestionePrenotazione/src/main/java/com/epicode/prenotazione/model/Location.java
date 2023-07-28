@@ -12,6 +12,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToOne;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -25,6 +26,8 @@ import lombok.NoArgsConstructor;
 public class Location {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+
 	@Column(nullable = false, unique = true)
 	private String code;
 	@Column(nullable = false)
@@ -36,6 +39,8 @@ public class Location {
 	private int occupants;
 	@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	private Building building;
+	@ManyToOne(cascade = CascadeType.ALL)
+	private User user;
 	
 	public void setOccupants() {
 		if(getType().equals(Type.CONFERENCE_ROOM)) {
