@@ -27,11 +27,12 @@ public class Prenotation {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	@ManyToOne
 	private User user;
 	@ManyToOne
 	private Location location;
 	private LocalDate validity; 
-	private Boolean occupied = false;
+	private LocalDate prenotationDate;
+	private Boolean occupied;
 
 }

@@ -20,7 +20,7 @@ import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
 @AllArgsConstructor
-
+@Data
 @Builder
 @Entity
 public class Location {

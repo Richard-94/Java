@@ -1,5 +1,7 @@
 package com.epicode.prenotazione.runner;
 
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,10 +11,11 @@ import org.springframework.stereotype.Component;
 import com.epicode.prenotazione.constants.Type;
 import com.epicode.prenotazione.model.Building;
 import com.epicode.prenotazione.model.Location;
-
+import com.epicode.prenotazione.model.Prenotation;
 import com.epicode.prenotazione.model.User;
 import com.epicode.prenotazione.service.BuildingService;
 import com.epicode.prenotazione.service.LocationService;
+import com.epicode.prenotazione.service.PrenotationService;
 import com.epicode.prenotazione.service.UserService;
 
 
@@ -23,6 +26,7 @@ public class BookingRunner implements CommandLineRunner {
 	@Autowired UserService serv;
 	@Autowired BuildingService build;
 	@Autowired LocationService lo;
+	@Autowired PrenotationService pre;
 	
 	@Override
 	public void run(String... args) throws Exception {
@@ -52,6 +56,23 @@ public class BookingRunner implements CommandLineRunner {
 		//Location first2 = lo.createLocation("AB123","Postazione molto accogliente",Type.CONFERENCE_ROOM,build.userFind(2l));
 		//Location first3 = lo.createLocation("CD125","Postazione comodo per una persona",Type.PRIVATE,build.userFind(1l));
 		//lo.saveLocation(first3);
+		
+		
+		//PRINT ALL Locations
+		
+		try {
+			List<Location> list = lo.printAllLocations();
+			list.forEach(l->System.out.println(l));
+			
+			Prenotation p = pre.prenote(serv.userFind(1l), lo.locationFind(1l));
+			pre.savePrenotation(p);
+			
+		}catch (Exception e) {
+            
+            log.error("An error occurred: " + e.getMessage());
+        }
+		
+		
 		
 	}
 

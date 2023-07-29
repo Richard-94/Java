@@ -1,5 +1,7 @@
 package com.epicode.prenotazione.service;
 
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.ObjectProvider;
@@ -37,6 +39,11 @@ Logger log = LoggerFactory.getLogger(BookingRunner.class);
 	 
 	public Building userFind(Long id) {
 		return bu.findById(id).get();
+	}
+	
+	public List<Building> printaAllLocation(){
+		return (List<Building>)bu.findAll();
+		
 	}
 	
 	

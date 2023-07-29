@@ -1,5 +1,7 @@
 package com.epicode.prenotazione.service;
 
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.ObjectProvider;
@@ -49,5 +51,17 @@ int occupants;
 		lo.save(f);
 		log.info( " save location in the DB");
 	}
+	
+	public List<Location> printAllLocations() {
+		return (List<Location>)lo.findAll();
+	}
+	
+	 
+	public Location locationFind(Long id) {
+		return lo.findById(id).get();
+	}
+	
 
 }
+
+
