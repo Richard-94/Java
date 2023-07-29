@@ -20,7 +20,7 @@ import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
 @AllArgsConstructor
-@Data
+
 @Builder
 @Entity
 public class Location {
@@ -37,27 +37,10 @@ public class Location {
 	private Type type;
 	@Column(nullable = false)
 	private int occupants;
-	@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	@ManyToOne
 	private Building building;
-	@ManyToOne(cascade = CascadeType.ALL)
-	private User user;
 	
-	public void setOccupants() {
-		if(getType().equals(Type.CONFERENCE_ROOM)) {
-			occupants = 100;
-		}
-		else if (getType().equals(Type.OPENSPACE)) {
-			occupants = 150;
-		}
-		
-		else if (getType().equals(Type.PRIVATE)) {
-			occupants = 1;
-		}else {
-			System.out.println("Unidentified Type");
-		}
 	
-	}
+	
 
 }
-  
-

@@ -35,7 +35,7 @@ public class User {
 	private String fullName;
 	@Column(nullable = false, unique = true)
 	private String email;
-	@ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	@ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	private List<Prenotation> prenotation = new ArrayList<>();
 
 }
