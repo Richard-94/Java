@@ -52,8 +52,6 @@ public class PrenotationService {
 							 throw new  IllegalArgumentException("ANNO INVALIDO");
 						}else if (date.getYear()< currentYear) {
 		                    throw new IllegalArgumentException("L'ANNO NON PUO' ESSERE MINORE DELL'ANNO CORRENTE");
-		                }else if (date.getMonth().getValue() < currentMonth.getValue()) {
-		                    throw new IllegalArgumentException("IL MESE NON PUO' ESSERE MINORE DEL MESE CORRENTE");
 		                }
 
 						LocalDate validity = date.plusDays(1);
