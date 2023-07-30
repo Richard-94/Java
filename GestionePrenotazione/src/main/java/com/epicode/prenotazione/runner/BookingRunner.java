@@ -31,7 +31,7 @@ public class BookingRunner implements CommandLineRunner {
 	
 	@Override
 	public void run(String... args) throws Exception {
-		log.info("Run...");
+		//log.info("Run...");
 		 
 		//CREATION OF USER
 		//User first = serv.createUser("Skank12", "Marck Arthur", "mar.art@example.com");
@@ -83,7 +83,7 @@ public class BookingRunner implements CommandLineRunner {
 
 					List<Location> locations = lo.findByCityAndType(Type.PRIVATE, "Venezia");
 			
-			//Prenotation p = pre.prenote(serv.userFind(1l), lo.locationFind(6l),LocalDate.of(2024, 1, 13));
+			//Prenotation p = pre.prenote(serv.userFind(1l), lo.locationFind(6l),LocalDate.of(2030, 1, 13));
 			//pre.savePrenotation(p);
 //			
 		}catch (Exception e) {
