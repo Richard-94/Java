@@ -49,7 +49,7 @@ public class PrenotationService {
 							throw new IllegalArgumentException("Hai già una prenotazione per quella data");
 						}
 						if(date.getYear() >= currentYear + 3){
-							 throw new  IllegalArgumentException("SI PUO' PRENOTARE FINO A TRE ANNI A PARTIRE DA QUESTO ANNO");
+							 throw new  IllegalArgumentException(" NON SI PUO' PRENOTARE FINO A TRE ANNI A PARTIRE DA QUESTO ANNO");
 						}else if (date.getYear()< currentYear) {
 		                    throw new IllegalArgumentException("L'ANNO NON PUO' ESSERE MINORE DELL'ANNO CORRENTE");
 		                }
