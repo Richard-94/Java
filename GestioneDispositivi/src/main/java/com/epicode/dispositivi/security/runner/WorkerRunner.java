@@ -14,8 +14,8 @@ public class WorkerRunner implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		//Worker w = ws.createWorker("Manuel", "Lomb", "mclom", "ma.lom@gmail.com");
-		Worker w = ws.createWorker("Angela", "Mordichio", "angie.1", "an.morb@example.com");
-		ws.saveWorker(w);
+		//Worker w = ws.createWorker("Angela", "Mordichio", "angie.1", "an.morb@example.com");
+		//ws.saveWorker(w);
 	}
 
 }
