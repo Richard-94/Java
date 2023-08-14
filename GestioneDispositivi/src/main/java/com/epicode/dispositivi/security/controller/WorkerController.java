@@ -32,7 +32,7 @@ public class WorkerController {
 	}
 	
 	@GetMapping("/{id}")
-	public ResponseEntity<?> getSingleUser(@PathVariable Long id){
+	public ResponseEntity<?> getSingleWorker(@PathVariable Long id){
 		Worker pr = w.workerFind(id);
 		return new ResponseEntity<Worker>(pr, HttpStatus.OK);
 
@@ -40,20 +40,20 @@ public class WorkerController {
 	
 	
 	@PostMapping
-	public ResponseEntity<?> createUser(@RequestBody Worker wo){
+	public ResponseEntity<?> createWorker(@RequestBody Worker wo){
 		Worker ws = w.saveWorker(wo);
 		return new ResponseEntity<Worker>(ws, HttpStatus.CREATED);
 
 	}
 	
 	@PutMapping("/{id}")
-	public ResponseEntity<?> updateUser(@PathVariable Long id, @RequestBody Worker u){
+	public ResponseEntity<?> updateWorker(@PathVariable Long id, @RequestBody Worker u){
 		Worker u1 = w.updateWorker(id, u);
 		return new ResponseEntity<Worker>(u1, HttpStatus.CREATED);	
 	}
 	
 	@DeleteMapping("/{id}")
-	public ResponseEntity<String> delUser(@PathVariable Long id){
+	public ResponseEntity<String> delWorker(@PathVariable Long id){
 		String msg = w.workerDel(id);
 		return new ResponseEntity<String>(msg, HttpStatus.OK);
 
