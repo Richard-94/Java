@@ -1,6 +1,6 @@
 package com.epicode.dispositivi.security.model;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,7 +35,9 @@ public class Allocation {
 	    private Status status;
 	    private Boolean available = true;
 	    @Column(nullable = false)
-	    private LocalDateTime story;
+	    private LocalDate assignedDate;
+	    @Column(nullable = false)
+	    private LocalDate returnedDate;
 	    @ManyToOne
 	    private Worker workers;
 	    @ManyToOne
