@@ -1,14 +1,18 @@
 package com.epicode.dispositivi.security.model;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
+import com.epicode.dispositivi.security.constants.Status;
 import com.epicode.dispositivi.security.repository.TabletRepository;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EntityExistsException;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -33,6 +37,14 @@ public abstract class Gadget {
 
     @Column(nullable = false)
     private String brand;
+    
+    
+    private LocalDate statusDate;
+    
+    private LocalDate availableDate;
+    
+    @Enumerated(EnumType.STRING)
+    private Status status;
 
     @Column(nullable = false)
     private String model;

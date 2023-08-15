@@ -1,5 +1,6 @@
 package com.epicode.dispositivi.security.service;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.beans.factory.ObjectProvider;
@@ -7,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
+import com.epicode.dispositivi.security.constants.Status;
 import com.epicode.dispositivi.security.model.Smartphone;
 import com.epicode.dispositivi.security.model.Tablet;
 import com.epicode.dispositivi.security.repository.SmartphoneRepository;
@@ -21,7 +23,7 @@ public class SmartphoneService {
 	@Autowired GadgetService g;
 	
 	
-	public Smartphone createSmartphone(String brand, String model, Integer memory, String operatingSystem, String isbn, Integer numOfSims, String operatingSystemVersion) {
+	public Smartphone createSmartphone(String brand, String model, Status status, Integer memory, String operatingSystem, String isbn, Integer numOfSims, String operatingSystemVersion, LocalDate customDate) {
 		Smartphone s = smartphoneProvider.getObject();
 		
 		s.setBrand(brand);;
@@ -34,6 +36,8 @@ public class SmartphoneService {
 		
 		
 		g.validateIsbn(s);
+		
+	    g.setDate(s, customDate); 
 		
 		return s;
 	

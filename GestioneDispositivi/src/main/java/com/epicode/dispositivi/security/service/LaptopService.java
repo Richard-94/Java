@@ -1,5 +1,6 @@
 package com.epicode.dispositivi.security.service;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.beans.factory.ObjectProvider;
@@ -7,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
+import com.epicode.dispositivi.security.constants.Status;
 import com.epicode.dispositivi.security.model.Laptop;
 import com.epicode.dispositivi.security.model.Tablet;
 import com.epicode.dispositivi.security.repository.LaptopRepository;
@@ -19,20 +21,23 @@ public class LaptopService {
 	@Autowired GadgetService gadget;
 	@Autowired LaptopRepository lap;
 	
-	public Laptop createLaptop(String brand, String model, Integer memory, String operatingSystem, String isbn,  Integer usbSlots) {
-		Laptop l = laptopProvider.getObject();
-		l.setBrand(brand);
-		l.setModel(model);
-		l.setMemory(memory);
-		l.setOperatingSystem(operatingSystem);
-		l.setIsbn(isbn);
-		l.setUsbSlots(usbSlots);
-		
-		gadget.validateIsbn(l);
-		
-		return l;
-		
+	public Laptop createLaptop(String brand, String model, Status status, Integer memory, String operatingSystem, String isbn,  Integer usbSlots, LocalDate customDate) {
+	    Laptop l = laptopProvider.getObject();
+	    l.setBrand(brand);
+	    l.setModel(model);
+	    l.setStatus(status);
+	    l.setMemory(memory);
+	    l.setOperatingSystem(operatingSystem);
+	    l.setIsbn(isbn);
+	    l.setUsbSlots(usbSlots);
+	    l.setStatus(status);
+	    
+	    gadget.validateIsbn(l);
+	    gadget.setDate(l, customDate); 
+	    
+	    return l;
 	}
+
 	
 	public Laptop saveLaptop(Laptop lb) {
         return lap.save(lb);

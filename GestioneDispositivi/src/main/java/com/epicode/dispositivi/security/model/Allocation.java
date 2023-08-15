@@ -30,10 +30,6 @@ public class Allocation {
 	 @Id
 	    @GeneratedValue(strategy = GenerationType.IDENTITY)
 	    private Long id;
-
-	    @Column(nullable = false)
-	    private Status status;
-	    private Boolean available = true;
 	    @Column(nullable = false)
 	    private LocalDate assignedDate;
 	    @Column(nullable = false)

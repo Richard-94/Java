@@ -1,5 +1,6 @@
 package com.epicode.dispositivi.security.service;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.beans.factory.ObjectProvider;
@@ -7,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
+import com.epicode.dispositivi.security.constants.Status;
 import com.epicode.dispositivi.security.model.Gadget;
 import com.epicode.dispositivi.security.model.Smartphone;
 import com.epicode.dispositivi.security.model.Tablet;
@@ -22,7 +24,7 @@ public class TabletService {
 	@Autowired TabletRepository tab;
 	@Autowired GadgetService g;
 	
-	public Tablet createTablet(String brand, String model, Integer memory, String operatingSystem, String isbn, String simDati) {
+	public Tablet createTablet(String brand, String model,Status status, Integer memory, String operatingSystem, String isbn, String simDati,LocalDate customDate) {
         Tablet t = tabletProvider.getObject();
         t.setBrand(brand);
         t.setModel(model);
@@ -30,9 +32,11 @@ public class TabletService {
         t.setOperatingSystem(operatingSystem);
         t.setIsbn(isbn);
         t.setSimDati(simDati);
+        t.setStatus(status);
         
         //fa la verifica solo su lato server
         g.validateIsbn(t);
+        g.setDate(t, customDate); 
 
         return t;
     }
