@@ -1,9 +1,12 @@
 package com.epicode.dispositivi.security.runner;
 
+import java.time.LocalDate;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
+import com.epicode.dispositivi.security.constants.Status;
 import com.epicode.dispositivi.security.model.Tablet;
 import com.epicode.dispositivi.security.service.TabletService;
 
@@ -13,10 +16,20 @@ public class TabletRunner implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		//Tablet t = tab.createTablet("Huawei", "p-100", 100, "Huawei", "AB1235", "Vodafone");
-		//Tablet t1 = tab.createTablet("Samsung", "s-1200", 150, "Android", "CS5285", "Tim");
+		//LocalDate customDate = LocalDate.of(2023, 2, 12);
+		//Tablet t =tab.createTablet("Samsung", "KL895", Status.RETIRED, 64, "Android", "ISBN365", "Vodafone", customDate);
 		
-		//tab.saveTablet(t1);
+//		LocalDate customDate2 = LocalDate.of(2022, 7, 15);
+//		Tablet t2 = tab.createTablet("Apple", "iPad Pro", Status.AVAILABLE, 256, "iOS", "ISBN879", "AT&T", customDate2);
+//
+//		
+//		
+//		 try {
+//	            tab.saveTablet(t2);
+//	        } catch (IllegalArgumentException e) {
+//	            System.err.println("Error: " + e.getMessage());
+//	           
+//	        }
 		
 		
 	}

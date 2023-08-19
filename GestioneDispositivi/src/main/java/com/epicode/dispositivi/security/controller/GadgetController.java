@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -59,7 +60,7 @@ public class GadgetController {
 	    return new ResponseEntity<>(gadgets, HttpStatus.OK);
 	}
 	
-	
+//	
 //	http://localhost:8080/api/gadget/tablets/1
 //	http://localhost:8080/api/gadget/laptops/2
 //	http://localhost:8080/api/gadget/smartphones/3
@@ -134,6 +135,26 @@ public class GadgetController {
 	    	throw new InvalidTypeException("Invalid gadget type. The type of gadget must be indicated in the json");
 	    }
 	}  
+	
+	
+//	
+//	http://localhost:8080/api/gadget/tablets/1
+//	http://localhost:8080/api/gadget/laptops/2
+//	http://localhost:8080/api/gadget/smartphones/3
+	@DeleteMapping("/{type}/{id}")
+	@PreAuthorize("hasRole('USER') or hasRole('MODERATOR') or hasRole('ADMIN')")
+	public ResponseEntity<String> deleteGadgetById(@PathVariable String type, @PathVariable Long id){
+		String msg = "";
+		 if (type.equalsIgnoreCase("tablets")) {
+		         msg  =tab.deleteTablet(id);
+		    } else if (type.equalsIgnoreCase("laptops")) {
+		         msg = lap.deleteLaptop(id);
+		    } else if (type.equalsIgnoreCase("smartphones")) {
+		    	 msg = sm.deleteSmartphone(id);
+		       
+		    }
+		    return new ResponseEntity<String>(msg, HttpStatus.OK);
+		}
 	   
 	
 	
@@ -154,6 +175,15 @@ public class GadgetController {
 //	    }
 //	}
 	
+	
+//	{
+//		  
+//		  "username": "oliviajones",
+//
+//		  "password": "myPassw0rd",
+//		  "roles": ["USER"]
+//		}
+	
 //	http://localhost:8080/api/gadget/tablets/1
 //		http://localhost:8080/api/gadget/laptops/2
 //		http://localhost:8080/api/gadget/smartphones/3
@@ -163,4 +193,31 @@ public class GadgetController {
 //	        "password": "pass123"
 //
 //	    }
+	
+//	{
+//		  
+//		  "username": "mikejohn",
+//		  
+//		  "password": "mysecretpass",
+//		  "roles": ["USER"]
+//		}
+	
+//	{
+//		 
+//		  "username": "danielmartinez",
+//		  
+//		  "password": "danielpass",
+//		  "roles": ["ADMIN", "MODERATOR"]
+//		}
+	
+//	{
+//		  
+//		  "username": "emmagarcia",
+//		  
+//		  "password": "emmapass",
+//		  "roles": ["MODERATOR", "USER"]
+//		}
+
+
+
 }

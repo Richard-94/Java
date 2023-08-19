@@ -3,6 +3,8 @@ package com.epicode.dispositivi.security.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -15,6 +17,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
 
 @Entity(name = "Workers")
 
@@ -38,7 +41,7 @@ public class Worker {
 
 	    @Column(nullable = false, unique = true)
 	    private String email;
-
+	    @JsonIgnore
 	    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	    private List<Gadget> gadgets = new ArrayList<>();
 
