@@ -116,17 +116,14 @@ public class GadgetController {
 		Gadget gadget = null;
 		if (gadgetWrapper.getTablet() != null) {
 	        Tablet t = gadgetWrapper.getTablet();
-	        ga.validateIsbn(t);
 	        Tablet tr = tab.updateTablet(id, t);
 	        return new ResponseEntity<Tablet>(tr, HttpStatus.CREATED);
 	    } else if (gadgetWrapper.getLaptop() != null) {
 	        Laptop l = gadgetWrapper.getLaptop();
-	        ga.validateIsbn(l);
 	        Laptop lb = lap.updateLaptop(id,l);
 	        return new ResponseEntity<Laptop>(lb, HttpStatus.CREATED);
 	    }else if(gadgetWrapper.getSmartphone() != null) {
 	    	Smartphone s = gadgetWrapper.getSmartphone();
-	    	ga.validateIsbn(s);
 	    	Smartphone sp = sm.updateSmartphone(id,s);
 	    	 return new ResponseEntity<Smartphone>(sp, HttpStatus.CREATED);
 	    	
@@ -161,7 +158,7 @@ public class GadgetController {
 	
 	
 
-//	eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhbm5hLmpvaG5zb25AZXhhbXBsZS5jb20iLCJpYXQiOjE2OTExODM3NjksImV4cCI6MTY5MjA0Nzc2OX0.ZiHLQr4YeDzkz12W9_ZdN4C62RNz212JeAXSj-VmGO5EI4Tx-iD-lQF4WbBOslIF
+
 //	Posting example
 //	to address http://localhost:8080/api/gadget
 //	{

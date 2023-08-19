@@ -17,21 +17,21 @@ public class SmartphoneRunner implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 //		LocalDate customDate = LocalDate.of(2023, 8, 17);
-//
+
 //		Smartphone newSmartphone = sm.createSmartphone("Nokia","3310",Status.AVAILABLE,1024,"Symbian","Vd235",1,"Flute",customDate);
 //
-		LocalDate customDate = LocalDate.of(2022, 3, 10);
+//		LocalDate customDate = LocalDate.of(2022, 3, 10);
 
-Smartphone newSmartphone = sm.createSmartphone("Samsung","Galaxy S21",Status.MAINTENANCE,4096,"Android","Sa456",2,"Clarinet",customDate);
+//Smartphone newSmartphone = sm.createSmartphone("Samsung","Galaxy S21",Status.MAINTENANCE,4096,"Android","Sa456",2,"Clarinet",customDate);
 
 
-
-		try {
-			sm.saveSmartphone(newSmartphone);
-		}catch (IllegalArgumentException e) {
-            System.err.println("Error: " + e.getMessage());
-          
-        }
+//
+//		try {
+//			sm.saveSmartphone(newSmartphone);
+//		}catch (IllegalArgumentException e) {
+//            System.err.println("Error: " + e.getMessage());
+//          
+//        }
 		
 		
 		

@@ -3,14 +3,15 @@ package com.epicode.dispositivi.security.service;
 import java.time.LocalDate;
 import java.util.List;
 
+
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import com.epicode.dispositivi.security.constants.Status;
-import com.epicode.dispositivi.security.model.Gadget;
-import com.epicode.dispositivi.security.model.Smartphone;
+import com.epicode.dispositivi.security.exception.NotNullException;
+
 import com.epicode.dispositivi.security.model.Tablet;
 import com.epicode.dispositivi.security.repository.TabletRepository;
 
@@ -53,11 +54,16 @@ public class TabletService {
 	}
 
 
-    public Tablet saveTablet(Tablet tb) {
-    	if (tb == null) {
-            throw new IllegalArgumentException("Tablet object cannot be null.");
+	public Tablet saveTablet(Tablet tb) {
+        try {
+            if (tb == null) {
+                throw new IllegalArgumentException("Tablet object cannot be null.");
+            }
+            g.controlNotNull(tb);
+            return tab.save(tb);
+        } catch (IllegalArgumentException e) {
+            throw new NotNullException("Tablet object is not valid for saving: " + e.getMessage());
         }
-        return tab.save(tb);
     }
     
     public Tablet findTablet(Long id) {

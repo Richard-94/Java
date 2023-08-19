@@ -16,12 +16,12 @@ public class LaptopRunner implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		//LocalDate customDate = LocalDate.of(2023, 2, 12);
-		//Laptop newLaptop =lab.createLaptop("Samsung", "JL235", Status.MAINTENANCE, 8, "OS", "ISBN235", 2, customDate{);
+//		LocalDate customDate = LocalDate.of(2023, 2, 12);
+//		Laptop newLaptop =lab.createLaptop("Samsung", "JL235", Status.MAINTENANCE, 8, "OS", "ISBN235", 2, customDate);
 //		LocalDate customDate = LocalDate.of(2023, 2, 12);
 //		Laptop newLaptop = lab.createLaptop("Dell", "XPS15", Status.AVAILABLE, 16, "Windows", "ISBN789", 3, customDate);
 //
-//
+////
 //		try {
 //			lab.saveLaptop(newLaptop);
 //		} catch (IllegalArgumentException e) {

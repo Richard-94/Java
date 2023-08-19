@@ -3,14 +3,16 @@ package com.epicode.dispositivi.security.service;
 import java.time.LocalDate;
 import java.util.List;
 
+
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import com.epicode.dispositivi.security.constants.Status;
+import com.epicode.dispositivi.security.exception.NotNullException;
 import com.epicode.dispositivi.security.model.Smartphone;
-import com.epicode.dispositivi.security.model.Tablet;
+
 import com.epicode.dispositivi.security.repository.SmartphoneRepository;
 
 import jakarta.persistence.EntityExistsException;
@@ -53,12 +55,18 @@ public class SmartphoneService {
 		
 	}
 	
-	  public Smartphone saveSmartphone(Smartphone smart) {
-		  if (smart == null) {
+	public Smartphone saveSmartphone(Smartphone smart) {
+	    try {
+	    	if (sm == null) {
 	            throw new IllegalArgumentException("Smartphone object cannot be null.");
 	        }
+	    	g.controlNotNull(smart);
 	        return sm.save(smart);
-	    }
+	    } catch (IllegalArgumentException e) {
+            throw new NotNullException("Smartphone object is not valid for saving: " + e.getMessage());
+        }
+	}
+
 	    
 	    
 	    public List<Smartphone> getAllSmartphones() {

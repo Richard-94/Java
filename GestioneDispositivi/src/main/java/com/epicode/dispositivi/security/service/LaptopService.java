@@ -3,14 +3,16 @@ package com.epicode.dispositivi.security.service;
 import java.time.LocalDate;
 import java.util.List;
 
+
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import com.epicode.dispositivi.security.constants.Status;
+import com.epicode.dispositivi.security.exception.NotNullException;
 import com.epicode.dispositivi.security.model.Laptop;
-import com.epicode.dispositivi.security.model.Tablet;
+
 import com.epicode.dispositivi.security.repository.LaptopRepository;
 
 import jakarta.persistence.EntityExistsException;
@@ -52,10 +54,15 @@ public class LaptopService {
 
 	
 	public Laptop saveLaptop(Laptop lb) {
-		if (lb == null) {
-            throw new IllegalArgumentException("Laptop object cannot be null.");
+		try {
+			if (lb == null) {
+	            throw new IllegalArgumentException("Laptop object cannot be null.");
+	        }
+			gadget.controlNotNull(lb);
+	        return lap.save(lb);
+		}catch (IllegalArgumentException e) {
+            throw new NotNullException("Laptop object is not valid for saving: " + e.getMessage());
         }
-        return lap.save(lb);
     }
 	
 	public Laptop findLaptop(Long id) {
