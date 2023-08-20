@@ -64,7 +64,7 @@ public class WorkerService {
 	
 	public Worker workerFindUserName(String name) {
 		if(!work.existsByUsername(name)) {
-			throw new EntityNotFoundException("UserName doesn't exists!!!");
+			throw new EntityNotFoundException("Worker doesn't exists!!!");
 		}
 		return work.findByUsername(name);
 	}

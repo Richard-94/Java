@@ -1,5 +1,7 @@
 package com.epicode.dispositivi.security.model;
 
+import java.time.LocalDate;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -23,4 +25,6 @@ public class Smartphone extends Gadget {
 	private String operatingSystemVersion;	
 	@Column(nullable = false)
 	private Integer numOfSims;
+	
+	
 }

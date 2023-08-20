@@ -6,10 +6,12 @@ import java.time.LocalDate;
 
 import com.epicode.dispositivi.security.exception.NotNullException;
 import com.epicode.dispositivi.security.constants.Status;
+import com.epicode.dispositivi.security.model.Allocation;
 import com.epicode.dispositivi.security.model.Gadget;
 import com.epicode.dispositivi.security.model.Laptop;
 import com.epicode.dispositivi.security.model.Smartphone;
 import com.epicode.dispositivi.security.model.Tablet;
+import com.epicode.dispositivi.security.repository.GadgetRepository;
 import com.epicode.dispositivi.security.repository.LaptopRepository;
 import com.epicode.dispositivi.security.repository.SmartphoneRepository;
 import com.epicode.dispositivi.security.repository.TabletRepository;
@@ -21,7 +23,9 @@ public class GadgetService {
 	@Autowired TabletRepository tb;
 	@Autowired LaptopRepository lab;
 	@Autowired SmartphoneRepository sm;
+	@Autowired GadgetRepository g;
 	
+	 
 	  public Gadget validateIsbn(Gadget g) {
 	        if (tb.existsByIsbn(g.getIsbn())) {
 	        	throw new EntityExistsException("ISBN already exists");
@@ -94,6 +98,8 @@ public class GadgetService {
 		        throw new IllegalArgumentException("Invalid status");
 		    }
 		}
-
-
+	  public Gadget gadgetFindByIsbn(String gadgetIsbn) {
+		    return g.findByIsbn(gadgetIsbn);
+		}
+	 
 }

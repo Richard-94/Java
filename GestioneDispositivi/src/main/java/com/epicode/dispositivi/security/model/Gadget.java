@@ -58,4 +58,12 @@ public abstract class Gadget {
     @Column(nullable = false, unique = true)
     private String isbn;
 
+	
+
+	
+
+	
+
+	
+
 }

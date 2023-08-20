@@ -7,6 +7,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
 
 import com.epicode.dispositivi.security.model.Allocation;
+import com.epicode.dispositivi.security.model.Worker;
 import com.epicode.dispositivi.security.service.AllocationService;
 import com.epicode.dispositivi.security.service.LaptopService;
 import com.epicode.dispositivi.security.service.SmartphoneService;
@@ -28,7 +29,7 @@ public class AllocationRunner implements CommandLineRunner {
 			//Allocation a2 = al.createAllocation(wk.workerFindUserName("alex_j"),lp.laptopFindIsbn("ISBN456"), LocalDate.of(2022, 10, 25));
 			//Allocation a3 = al.createAllocation(wk.workerFindUserName("alex_j"),sm.smartphoneFindIsbn("Vd235"), LocalDate.of(2023, 10, 25));
 			//Allocation a4 = al.createAllocation(wk.workerFindUserName("alex_j"),tb.tabletFindIsbn("ISBN345"), LocalDate.of(2023, 10, 25));
-			//al.saveAllocation(a4);
+			//al.saveAllocation(a3);
 		}catch (IllegalArgumentException e) {
 			System.out.println(e.getMessage());
 	       
@@ -36,13 +37,17 @@ public class AllocationRunner implements CommandLineRunner {
 	}
 		
 		try {
-			Allocation a = al.createReturnedAllocation(wk.workerFindUserName("mclom"),lp.laptopFindIsbn("ISBN456"), LocalDate.of(2023, 10, 25));
-			al.saveAllocation(a);
-		}catch (IllegalArgumentException e) {
-			System.out.println(e.getMessage());
-	       
-	
-	}
+//		    Worker worker = wk.workerFindUserName("mclom");
+//		    Allocation existingAllocation = al.findByWorker(worker);
+//		        LocalDate assignedDate = existingAllocation.getAssignedDate();
+//		        Allocation a = al.createReturnedAllocation(worker, sm.smartphoneFindIsbn("Vd235"), LocalDate.of(2023, 10, 25), assignedDate);
+//		        al.saveAllocation(a);
+		    
+		} catch (IllegalArgumentException e) {
+		    System.out.println(e.getMessage());
+		}
+
+
 	
 		
 	}
