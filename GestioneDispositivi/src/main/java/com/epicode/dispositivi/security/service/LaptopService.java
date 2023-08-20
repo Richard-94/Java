@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 import com.epicode.dispositivi.security.constants.Status;
 import com.epicode.dispositivi.security.exception.NotNullException;
 import com.epicode.dispositivi.security.model.Laptop;
-
+import com.epicode.dispositivi.security.model.Worker;
 import com.epicode.dispositivi.security.repository.LaptopRepository;
 
 import jakarta.persistence.EntityExistsException;
@@ -73,6 +73,7 @@ public class LaptopService {
 		
     }
 	
+	
 	public Laptop updateLaptop(Long id, Laptop l) {
 		if(!lap.existsById(id)) {
 			throw new EntityNotFoundException("User not exists!!!");
@@ -92,6 +93,13 @@ public class LaptopService {
 		}
 		 lap.deleteById(id);
 		 return "Laptop deleted";
+	}
+    
+    public Laptop laptopFindIsbn(String isbn) {
+		if(!lap.existsByIsbn(isbn)) {
+			throw new EntityNotFoundException("UserName doesn't exists!!!");
+		}
+		return lap.findByIsbn(isbn);
 	}
 
 

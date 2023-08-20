@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 
 import com.epicode.dispositivi.security.constants.Status;
 import com.epicode.dispositivi.security.exception.NotNullException;
-
+import com.epicode.dispositivi.security.model.Laptop;
 import com.epicode.dispositivi.security.model.Tablet;
 import com.epicode.dispositivi.security.repository.TabletRepository;
 
@@ -47,7 +47,7 @@ public class TabletService {
 	        g.setDate(t, customDate);
 
 	        return t;
-	    } catch (IllegalArgumentException e) {
+	    } catch (NotNullException e) {
 	        System.err.println("Error creating tablet: " + e.getMessage());
 	        return null;
 	    }
@@ -96,6 +96,14 @@ public class TabletService {
 		 tab.deleteById(id);
 		 return "Laptop deleted";
 	}
+    
+    public Tablet tabletFindIsbn(String isbn) {
+  		if(!tab.existsByIsbn(isbn)) {
+  			throw new EntityNotFoundException("UserName doesn't exists!!!");
+  		}
+  		return tab.findByIsbn(isbn);
+  	}
+
 
 
 }

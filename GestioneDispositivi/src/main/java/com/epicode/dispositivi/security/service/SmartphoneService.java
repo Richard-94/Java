@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 
 import com.epicode.dispositivi.security.constants.Status;
 import com.epicode.dispositivi.security.exception.NotNullException;
+import com.epicode.dispositivi.security.model.Laptop;
 import com.epicode.dispositivi.security.model.Smartphone;
 
 import com.epicode.dispositivi.security.repository.SmartphoneRepository;
@@ -97,6 +98,15 @@ public class SmartphoneService {
 			 sm.deleteById(id);
 			 return "Laptop deleted";
 		}
+	    
+	    
+	    public Smartphone smartphoneFindIsbn(String isbn) {
+			if(!sm.existsByIsbn(isbn)) {
+				throw new EntityNotFoundException("UserName doesn't exists!!!");
+			}
+			return sm.findByIsbn(isbn);
+		}
+
 
 		
 	

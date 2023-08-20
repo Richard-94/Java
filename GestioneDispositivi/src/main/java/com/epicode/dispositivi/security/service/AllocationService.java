@@ -64,32 +64,32 @@ public class AllocationService {
 		
 			public Allocation createReturnedAllocation(Worker workers, Gadget gadgets,LocalDate returndDate) {
 				Status gadgetStatus = gadgets.getStatus();
-				 if(gadgetStatus == Status.RETIRED) {
-					throw new IllegalArgumentException("Gadget is retired so cannot be assigned");
+			
+					 if(gadgetStatus == Status.RETIRED) {
+							throw new IllegalArgumentException("Gadget is retired so cannot be assigned");
+							
+						}
+						else if(gadgetStatus == Status.MAINTENANCE) {
+							throw new IllegalArgumentException("Gadget is in  maintenance so it  cannot be assigned");
+						}
+						else if (gadgetStatus != Status.ALLOCATED) {
+				            throw new IllegalArgumentException("Gadget must be allocated in order to create a return allocation");
+				        }
+						else  {
+							Allocation newAllocation = allocationProvider.getObject().builder()
+									.workers(workers)
+									.gadgets(gadgets)
+									.returnedDate(returndDate)
+									.build();
+							
+							gadgets.setStatus(Status.AVAILABLE);
+							g.save(gadgets);
+							
+							return newAllocation;
+							
+							
+						}
 				}
-				else if(gadgetStatus == Status.MAINTENANCE) {
-					throw new IllegalArgumentException("Gadget is in  maintenance so it  cannot be assigned");
-				}
-				else if (gadgetStatus != Status.ALLOCATED) {
-		            throw new IllegalArgumentException("Gadget must be allocated in order to create a return allocation");
-		        }
-				else  {
-					Allocation newAllocation = allocationProvider.getObject().builder()
-							.workers(workers)
-							.gadgets(gadgets)
-							.returnedDate(returndDate)
-							.build();
-					
-					gadgets.setStatus(Status.ALLOCATED);
-					g.save(gadgets);
-					
-					return newAllocation;
-					
-					
-				}
-				
-				
-			}
 			
 			
 		

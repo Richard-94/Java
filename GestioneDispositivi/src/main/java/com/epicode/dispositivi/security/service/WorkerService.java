@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import jakarta.persistence.EntityExistsException;
 import jakarta.persistence.EntityNotFoundException;
 
+import com.epicode.dispositivi.security.exception.NotNullException;
 import com.epicode.dispositivi.security.model.Worker;
 import com.epicode.dispositivi.security.repository.WorkerRepository;
 import java.util.List;
@@ -28,17 +29,44 @@ public class WorkerService {
 	
 	public Worker saveWorker(Worker wo) {
 		if(work.existsByEmail(wo.getEmail())) {
-			throw new EntityExistsException("User email exists!!!");
+			throw new EntityExistsException("Worker email already exists!!!");
 		}
+		if(work.existsByUsername(wo.getUsername())) {
+			throw new EntityExistsException("Worker Username already exists!!!");
+		}
+		controlWorker(wo);
 		return work.save(wo);
 		
+	}
+	
+	public Worker controlWorker (Worker wk) {
+		if (wk.getName() == null) {
+			throw new NotNullException("Name field cannot be null.");
+		}
+		if (wk.getSurname() == null) {
+			throw new NotNullException("Surname field cannot be null.");
+		}
+		if (wk.getEmail() == null) {
+			throw new NotNullException("Email field cannot be null.");
+		}
+		if (wk.getUsername() == null) {
+			throw new NotNullException("Username field cannot be null.");
+		}
+		return wk;
 	}
 	 
 	public Worker workerFind(Long id) {
 		if(!work.existsById(id)) {
-			throw new EntityNotFoundException("User not exists!!!");
+			throw new EntityNotFoundException("Worker doesn't exists!!!");
 		}
 		return work.findById(id).get();
+	}
+	
+	public Worker workerFindUserName(String name) {
+		if(!work.existsByUsername(name)) {
+			throw new EntityNotFoundException("UserName doesn't exists!!!");
+		}
+		return work.findByUsername(name);
 	}
 	
 	public String workerDel(Long id) {
@@ -46,7 +74,7 @@ public class WorkerService {
 			throw new EntityNotFoundException("User not exists!!!");
 		}
 		 work.deleteById(id);
-		 return "contact deleted";
+		 return "Worker deleted";
 	}
 	
 	
