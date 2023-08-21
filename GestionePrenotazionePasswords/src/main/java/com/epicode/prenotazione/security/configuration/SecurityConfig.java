@@ -1,4 +1,4 @@
-package com.epicode.dispositivi.security.configuration;
+package com.epicode.prenotazione.security.configuration;
 
 
 import org.springframework.context.annotation.Bean;
@@ -19,10 +19,8 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
-import com.epicode.dispositivi.security.security.JwtAuthenticationEntryPoint;
-import com.epicode.dispositivi.security.security.JwtAuthenticationFilter;
-
-
+import com.epicode.prenotazione.security.security.JwtAuthenticationEntryPoint;
+import com.epicode.prenotazione.security.security.JwtAuthenticationFilter;
 
 
 
@@ -57,8 +55,7 @@ public class SecurityConfig {
     @Bean
     SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 
-    	//http.cors().and().csrf().disable() -> deprecated
-    	http.cors(cors -> cors.disable())
+    	http.cors().and().csrf().disable()
         .authorizeHttpRequests((authorize) -> authorize
         		.requestMatchers(HttpMethod.GET, "/api/**").permitAll()
                 .requestMatchers("/api/auth/**").permitAll()
