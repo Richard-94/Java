@@ -1,5 +1,6 @@
 package com.epicode.prenotazione.runner;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import org.slf4j.Logger;
@@ -39,6 +40,11 @@ public class BookingRunner implements CommandLineRunner {
 		//User u = serv.userFind(1l);
 		//log.info(""+ u);
 		
+		Type locationType = Type.CONFERENCE_ROOM;
+		String city = "Venezia";
+
+		List<Location> locations = lo.findByCityAndType(locationType, city);
+		
 		
 		
 		
@@ -60,20 +66,22 @@ public class BookingRunner implements CommandLineRunner {
 		
 		//PRINT ALL Locations
 		
-		try {
-			List<Location> list = lo.printAllLocations();
-			list.forEach(l->System.out.println(l));
-			
-			Prenotation p = pre.prenote(serv.userFind(1l), lo.locationFind(1l));
-			pre.savePrenotation(p);
-			
-		}catch (Exception e) {
-            
-            log.error("An error occurred: " + e.getMessage());
-        }
-		
-		
-		
+//		try {
+//			List<Location> list = lo.printAllLocations();
+//			list.forEach(l->System.out.println(l));
+//			
+//			Prenotation p = pre.prenote(serv.userFind(2l), lo.locationFind(1l),LocalDate.of(2026, 1, 10));
+//			pre.savePrenotation(p);
+//			
+//		}catch (Exception e) {
+//            
+//            log.error("An error occurred: " + e.getMessage());
+//        }
+//		
+//		
+//		
 	}
+	
+	
 
 }

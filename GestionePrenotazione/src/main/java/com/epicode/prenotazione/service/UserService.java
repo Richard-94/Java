@@ -1,5 +1,7 @@
 package com.epicode.prenotazione.service;
 
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.ObjectProvider;
@@ -7,6 +9,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
+import com.epicode.prenotazione.constants.Type;
+import com.epicode.prenotazione.model.Location;
+import com.epicode.prenotazione.model.Prenotation;
 import com.epicode.prenotazione.model.User;
 import com.epicode.prenotazione.repositories.UserRepository;
 import com.epicode.prenotazione.runner.BookingRunner;
@@ -36,6 +41,10 @@ public class UserService {
 	public User userFind(Long id) {
 		return use.findById(id).get();
 	}
+	
+
+
+	
 
 
 

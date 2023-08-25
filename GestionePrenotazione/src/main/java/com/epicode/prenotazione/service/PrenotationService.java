@@ -2,6 +2,7 @@ package com.epicode.prenotazione.service;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.Month;
 import java.time.temporal.ChronoUnit;
 import java.util.List;
 
@@ -24,6 +25,10 @@ import com.epicode.prenotazione.runner.BookingRunner;
 public class PrenotationService {
 	//Logger log = LoggerFactory.getLogger(BookingRunner.class);
 	private static final Logger log = LoggerFactory.getLogger(PrenotationService.class);
+	static int currentYear = LocalDate.now().getYear();
+	static int currentDayOfMonth = LocalDate.now().getDayOfMonth();
+	
+	static Month currentMonth = LocalDate.now().getMonth();
 	
 	@Autowired @Qualifier("booking") private ObjectProvider<Prenotation> prenotatioProvider;
 	@Autowired PrenotationRepository pre;
@@ -37,13 +42,22 @@ public class PrenotationService {
 	
 	
 	
-	public Prenotation prenote(User user, Location location) {
-		 List<Prenotation> userPrenotations = pre.findByPrenotationDateAndUser(LocalDate.now(), user);
-		    if (!userPrenotations.isEmpty()) {
-		        throw new IllegalArgumentException("Hai già una prenotazione per oggi");
-		    }
-		        		LocalDateTime validity = LocalDateTime.now().plus(1, ChronoUnit.DAYS);
-			            LocalDate prenotationDate = LocalDate.now();
+	public Prenotation prenote(User user, Location location,LocalDate date) {
+						List<Prenotation> userPrenotations = pre.findByPrenotationDateAndUser(date, user);
+
+						if (!userPrenotations.isEmpty()) {
+							throw new IllegalArgumentException("Hai già una prenotazione per quella data");
+						}
+						if(date.getYear() >= currentYear + 3){
+							 throw new  IllegalArgumentException("ANNO INVALIDO");
+						}else if (date.getYear()< currentYear) {
+		                    throw new IllegalArgumentException("L'ANNO NON PUO' ESSERE MINORE DELL'ANNO CORRENTE");
+		                }else if (date.getMonth().getValue() < currentMonth.getValue()) {
+		                    throw new IllegalArgumentException("IL MESE NON PUO' ESSERE MINORE DEL MESE CORRENTE");
+		                }
+
+						LocalDate validity = date.plusDays(1);
+
 			            Boolean occupied = true;
 			            if(location.getOccupants()<=0) {
 			            	 
@@ -52,18 +66,14 @@ public class PrenotationService {
 			            Prenotation newPrenotation = prenotatioProvider.getObject().builder()
 			                    .user(user)
 			                    .location(location)
-			                    .validity(validity.toLocalDate())
-			                    .prenotationDate(prenotationDate)
+			                    .validity(validity)
+			                    .prenotationDate(date)
 			                    .occupied(occupied)
 			                    .build();
 			            location.setOccupants(location.getOccupants() - 1);
 			            lo.save(location);
-			            return newPrenotation;
-			          
-			        
-		        	
-		        
-		         
+						return newPrenotation;
+   
 	  }
 		  
 	       

@@ -61,6 +61,14 @@ int occupants;
 		return lo.findById(id).get();
 	}
 	
+	
+	public List<Location> findByCityAndType(Type t, String city) {
+	    List<Location> userLocations = lo.findByTypeAndCity(t, city);
+	    userLocations.forEach(k -> log.info("The locations in the city are " + k));
+	    return userLocations;
+	}
+
+	
 
 }
 
