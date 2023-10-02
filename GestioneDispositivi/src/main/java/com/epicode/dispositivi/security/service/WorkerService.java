@@ -3,6 +3,8 @@ package com.epicode.dispositivi.security.service;
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import jakarta.persistence.EntityExistsException;
 import jakarta.persistence.EntityNotFoundException;
@@ -41,16 +43,16 @@ public class WorkerService {
 	
 	public Worker controlWorker (Worker wk) {
 		if (wk.getName() == null) {
-			throw new NotNullException("Name field cannot be null.");
+			throw new NotNullException("Name field cannot be empty.");
 		}
 		if (wk.getSurname() == null) {
-			throw new NotNullException("Surname field cannot be null.");
+			throw new NotNullException("Surname field cannot be empty.");
 		}
 		if (wk.getEmail() == null) {
-			throw new NotNullException("Email field cannot be null.");
+			throw new NotNullException("Email field cannot be empty.");
 		}
 		if (wk.getUsername() == null) {
-			throw new NotNullException("Username field cannot be null.");
+			throw new NotNullException("Username field cannot be empty.");
 		}
 		return wk;
 	}
@@ -68,25 +70,31 @@ public class WorkerService {
 		}
 		return work.findByUsername(name);
 	}
-	
-	public String workerDel(Long id) {
-		if(!work.existsById(id)) {
-			throw new EntityNotFoundException("User not exists!!!");
-		}
-		 work.deleteById(id);
-		 return "Worker deleted";
+	public ResponseEntity<String> workerDel(Long id) {
+	    if (!work.existsById(id)) {
+	        throw new EntityNotFoundException("User not exists!!!");
+	    }
+	    
+	    work.deleteById(id);
+	    return new ResponseEntity<>("Worker deleted", HttpStatus.OK);
 	}
+
 	
 	
 	public Worker updateWorker(Long id, Worker w) {
 		if(!work.existsById(id)) {
 			throw new EntityNotFoundException("User not exists!!!");
 		}
-		if(id != w.getId()) {
-			throw new EntityNotFoundException("Id and UserID do not match!");
-		}
-		
-		return work.save(w);
+//		if(id != w.getId()) {
+//			throw new EntityNotFoundException("Id and UserID do not match!");
+//		}
+		  Worker existingWorker = work.findById(id).get();
+	    existingWorker.setName(w.getName());
+	    existingWorker.setSurname(w.getSurname());
+	    existingWorker.setUsername(w.getUsername());
+	    existingWorker.setEmail(w.getEmail());
+
+	    return work.save(existingWorker);
 	}
 	
 	

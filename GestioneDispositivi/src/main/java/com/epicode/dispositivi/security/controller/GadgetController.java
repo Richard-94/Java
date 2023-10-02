@@ -32,7 +32,7 @@ import com.epicode.dispositivi.security.service.TabletService;
 import jakarta.persistence.EntityExistsException;
 
 
-
+@CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @RequestMapping("/api/gadget")
 public class GadgetController {
@@ -46,7 +46,7 @@ public class GadgetController {
 	//http://localhost:8080/api/gadget?type=tablets
 	//http://localhost:8080/api/gadget?type=smartphones
 	@GetMapping
-	@PreAuthorize("hasRole('USER') or hasRole('MODERATOR') or hasRole('ADMIN')")
+	//@PreAuthorize("hasRole('USER') or hasRole('MODERATOR') or hasRole('ADMIN')")
 	public ResponseEntity<List<?>> getGadgets(@RequestParam(name = "type", required = false) String type) {
 	    List<?> gadgets = null;
 	    if (type.equalsIgnoreCase("tablets")) {

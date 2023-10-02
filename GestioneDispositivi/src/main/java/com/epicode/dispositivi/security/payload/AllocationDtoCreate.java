@@ -19,6 +19,4 @@ public class AllocationDtoCreate {
 	private String workerUsername;
     private String gadgetIsbn;
     private LocalDate assignedDate;
-	
-
 }

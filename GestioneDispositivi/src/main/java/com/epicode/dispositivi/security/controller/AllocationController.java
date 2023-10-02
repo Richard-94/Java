@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -22,14 +23,14 @@ import com.epicode.dispositivi.security.payload.AllocationDtoReturn;
 import com.epicode.dispositivi.security.service.AllocationService;
 
 import jakarta.persistence.EntityNotFoundException;
-
+@CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @RequestMapping("/api/allocations")
 public class AllocationController {
 	@Autowired AllocationService al;
 	
 	@GetMapping
-	@PreAuthorize("hasRole('ADMIN')")
+	//@PreAuthorize("hasRole('ADMIN')")
 	public ResponseEntity<List<Allocation>> getWorkers(){
 		List<Allocation> allocations = al.getAllAllocations();
 		ResponseEntity<List<Allocation>>u = new ResponseEntity <List<Allocation>>(allocations, HttpStatus.OK);

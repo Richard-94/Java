@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.epicode.dispositivi.security.payload.JWTAuthResponse;
 import com.epicode.dispositivi.security.payload.LoginDto;
 import com.epicode.dispositivi.security.payload.RegisterDto;
+import com.epicode.dispositivi.security.payload.RegisterResponse;
 import com.epicode.dispositivi.security.service.AuthService;
 
 
@@ -43,9 +44,9 @@ public class AuthController {
 
     // Build Register REST API
     @PostMapping(value = {"/register", "/signup"})
-    public ResponseEntity<String> register(@RequestBody RegisterDto registerDto){
-        String response = authService.register(registerDto);
-        return new ResponseEntity<>(response, HttpStatus.CREATED);
+    public ResponseEntity<?> register(@RequestBody RegisterDto registerDto){
+    	RegisterResponse response = authService.register(registerDto);
+        return new ResponseEntity<RegisterResponse>(response, HttpStatus.CREATED);
     }
     
     // JSON inviato dal Client

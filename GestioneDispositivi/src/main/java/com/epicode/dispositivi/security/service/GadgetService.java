@@ -6,7 +6,6 @@ import java.time.LocalDate;
 
 import com.epicode.dispositivi.security.exception.NotNullException;
 import com.epicode.dispositivi.security.constants.Status;
-import com.epicode.dispositivi.security.model.Allocation;
 import com.epicode.dispositivi.security.model.Gadget;
 import com.epicode.dispositivi.security.model.Laptop;
 import com.epicode.dispositivi.security.model.Smartphone;

@@ -16,6 +16,7 @@ import com.epicode.dispositivi.security.entity.Role;
 import com.epicode.dispositivi.security.exception.MyAPIException;
 import com.epicode.dispositivi.security.payload.LoginDto;
 import com.epicode.dispositivi.security.payload.RegisterDto;
+import com.epicode.dispositivi.security.payload.RegisterResponse;
 import com.epicode.dispositivi.security.repository.RoleRepository;
 import com.epicode.dispositivi.security.repository.UserRepository;
 import com.epicode.dispositivi.security.security.JwtTokenProvider;
@@ -64,7 +65,7 @@ public class AuthServiceImpl implements AuthService {
     }
 
     @Override
-    public String register(RegisterDto registerDto) {
+    public RegisterResponse register(RegisterDto registerDto) {
 
         // add check for username exists in database
         if(userRepository.existsByUsername(registerDto.getUsername())){
@@ -75,11 +76,19 @@ public class AuthServiceImpl implements AuthService {
         if(userRepository.existsByEmail(registerDto.getEmail())){
             throw new MyAPIException(HttpStatus.BAD_REQUEST, "Email is already exists!.");
         }
+        
+        // add check for secretCode exists in database
+//        if(userRepository.existsBySecretCode(registerDto.getSecretCode())){
+//            throw new MyAPIException(HttpStatus.BAD_REQUEST, "SecretCode is already exists!.");
+//        }
 
         User user = new User();
         user.setName(registerDto.getName());
         user.setUsername(registerDto.getUsername());
         user.setEmail(registerDto.getEmail());
+        //user.setDate(LocalDateTime.now());
+        //user.setSecretCode(registerDto.getSecretCode());
+        //user.setCreditCard(registerDto.getCreditCard());
         user.setPassword(passwordEncoder.encode(registerDto.getPassword()));
 
         Set<Role> roles = new HashSet<>();
@@ -97,8 +106,12 @@ public class AuthServiceImpl implements AuthService {
         user.setRoles(roles);
         System.out.println(user);
         userRepository.save(user);
-
-        return "User registered successfully!.";
+        
+        return new RegisterResponse(
+				registerDto.getName(), 
+				registerDto.getUsername(), 
+				registerDto.getEmail(), 
+				"User registered successfully!.");
     }
     
     public ERole getRole(String role) {
