@@ -50,13 +50,17 @@ public class TesiService {
 //	}
 	
 	public RicieveMessage saveMessage(RicieveMessage tesiMessage) {
+		try {
+			
 			tesiControl.controlNotNull(tesiMessage);
 			LocalDate date = LocalDate.now();
 			tesiMessage.setDate(date);
 			tesiControl.controlNotNull(tesiMessage);
 			tesiControl.controlNameExistance(tesiMessage);
 			return tesiRepo.save(tesiMessage);
-		
+		}catch (IllegalArgumentException e) {
+            throw new NotNullException("Sport event is not valid for saving: " + e.getMessage());
+        }
 	}
 	
 	 public List<RicieveMessage> getAllMessages() {

@@ -30,7 +30,7 @@ public class TesiControl {
 	 
 	 public RicieveMessage controlNameExistance(RicieveMessage name) {
 		    RicieveMessage userName = tesiRepository.findByName(name.getName());
-		    if (userName.getName().equals(name.getName())) {
+		    if (userName != null && userName.getName().equals(name.getName())) {
 		        throw new NotNullException("Hai gia inserito un messaggio");
 		    }
 		    return name;
