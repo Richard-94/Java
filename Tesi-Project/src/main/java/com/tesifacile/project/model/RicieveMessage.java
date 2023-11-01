@@ -34,6 +34,8 @@ public class RicieveMessage {
 	  private String message;
 	  
 	  private LocalDate date;
+	  
+	  private int myRatingControl;
 
 
 }

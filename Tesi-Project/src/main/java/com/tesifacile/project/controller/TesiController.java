@@ -25,6 +25,7 @@ public class TesiController {
     TesiService tesiServ;
 
     @GetMapping("/all/messages")
+	@CrossOrigin(origins = "*", maxAge = 3600)
     public ResponseEntity<List<RicieveMessage>> getMessages() {
         List<RicieveMessage> messages = tesiServ.getAllMessages();
         ResponseEntity<List<RicieveMessage>> mess = new ResponseEntity<>(messages, HttpStatus.OK);
@@ -38,4 +39,12 @@ public class TesiController {
 		return new ResponseEntity<RicieveMessage>(ws, HttpStatus.CREATED);
 
 	}
+    
+    
+//    @GetMapping("/all/getallmessages")
+//    public ResponseEntity<List<RicieveMessage>> getAllMessages(){
+//		List<RicieveMessage> users = tesiServ.messagesToShow();
+//		ResponseEntity<List<RicieveMessage>>u = new ResponseEntity <List<RicieveMessage>>(users, HttpStatus.OK);
+//		return u;
+//	}
 }

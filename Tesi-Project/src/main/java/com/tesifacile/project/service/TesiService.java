@@ -63,6 +63,12 @@ public class TesiService {
         }
 	}
 	
+	
+	public List<RicieveMessage> messagesToShow() {
+		List<RicieveMessage> ricMess = (List<RicieveMessage>) tesiRepo.findAll();
+		return ricMess;
+	}
+	
 	 public List<RicieveMessage> getAllMessages() {
 	    	List <RicieveMessage> message =  (List<RicieveMessage>) tesiRepo.findAll();
 	    	return message;
