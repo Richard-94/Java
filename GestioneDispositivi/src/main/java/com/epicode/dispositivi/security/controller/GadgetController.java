@@ -109,7 +109,7 @@ public class GadgetController {
 	    
 	}
 	
-	//http://localhost:8080/api/gadget/tablets/552
+	//http://localhost:8082/api/gadget/tablets/552
 	@PutMapping("/{type}/{id}")
 	@PreAuthorize("hasRole('USER') or hasRole('MODERATOR') or hasRole('ADMIN')")
 	public ResponseEntity<?> updateGadgetById(@PathVariable String type, @PathVariable Long id, @RequestBody GadgetWrapper gadgetWrapper) {

@@ -1,7 +1,5 @@
 package com.tesifacile.project.model;
 
-
-
 import java.time.LocalDate;
 
 import jakarta.persistence.Column;
@@ -15,7 +13,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
@@ -23,19 +20,18 @@ import lombok.ToString;
 @Builder
 @ToString
 public class RicieveMessage {
-	 @Id
-	 @GeneratedValue(strategy = GenerationType.IDENTITY)
-	 private Long id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
 
-	 @Column(nullable = false)
-	 private String name;
-	 
-	  @Column(nullable = false,columnDefinition = "TEXT")
-	  private String message;
-	  
-	  private LocalDate date;
-	  
-	  private int myRatingControl;
+	@Column(nullable = false)
+	private String name;
 
+	@Column(nullable = false, columnDefinition = "TEXT")
+	private String message;
+
+	private LocalDate date;
+
+	private int myRatingControl;
 
 }

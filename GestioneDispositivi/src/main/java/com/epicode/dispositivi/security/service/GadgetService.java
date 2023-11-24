@@ -52,9 +52,9 @@ public class GadgetService {
 		    if (g.getOperatingSystem() == null) {
 		        throw new NotNullException("OperatingSystem field cannot be null.");
 		    }
-		    if (g.getStatusDate() == null) {
-		        throw new NotNullException("StatusDate field cannot be null.");
-		    }
+//		    if (g.getStatusDate() == null) {
+//		        throw new NotNullException("StatusDate field cannot be null.");
+//		    }
 		    if (g.getMemory() == null) {
 		        throw new NotNullException("Memory field cannot be null.");
 		    }

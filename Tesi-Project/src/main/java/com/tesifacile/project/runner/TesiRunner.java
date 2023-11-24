@@ -8,15 +8,16 @@ import org.springframework.stereotype.Component;
 import com.tesifacile.project.service.TesiService;
 
 @Component
-public class TesiRunner implements ApplicationRunner  {
-	@Autowired TesiService tesiServ;
+public class TesiRunner implements ApplicationRunner {
+	@Autowired
+	TesiService tesiServ;
 
 	@Override
 	public void run(ApplicationArguments args) throws Exception {
 		System.out.println("Run..");
-		
-		//tesiServ.scheduledDeleteMessages();
-		
+
+		// tesiServ.scheduledDeleteMessages();
+
 	}
 
 }

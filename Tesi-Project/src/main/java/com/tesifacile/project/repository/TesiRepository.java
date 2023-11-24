@@ -8,6 +8,4 @@ public interface TesiRepository extends CrudRepository<RicieveMessage, Long> {
 
 	RicieveMessage findByName(String name);
 
-	
-
 }

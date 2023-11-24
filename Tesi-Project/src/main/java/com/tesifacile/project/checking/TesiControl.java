@@ -1,6 +1,5 @@
 package com.tesifacile.project.checking;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,32 +11,30 @@ import com.tesifacile.project.repository.TesiRepository;
 
 @Service
 public class TesiControl {
-	 @Autowired TesiRepository tesiRepository;
-	
-	 
-	 public Object controlNotNull(RicieveMessage ricieve) {
+	@Autowired
+	TesiRepository tesiRepository;
 
-		    if (ricieve.getName() == null || ricieve.getName() == "") {
-		        throw new NotNullException("Inserire un nome");
-		    }
-		    
-		    if (ricieve.getMessage() == null || ricieve.getMessage() == "") {
-		        throw new NotNullException("Inserire il messaggio");
-		    }
-			return ricieve;
+	public Object controlNotNull(RicieveMessage ricieve) {
 
-	 }
-	 
-	 public RicieveMessage controlNameExistance(RicieveMessage name) {
-		    RicieveMessage userName = tesiRepository.findByName(name.getName());
-		    if (userName != null && userName.getName().equals(name.getName())) {
-		        throw new NotNullException("Hai gia inserito un messaggio");
-		    }
-		    return name;
+		if (ricieve.getName() == null || ricieve.getName() == "") {
+			throw new NotNullException("Inserire un nome");
 		}
 
-	 
-	 
+		if (ricieve.getMessage() == null || ricieve.getMessage() == "") {
+			throw new NotNullException("Inserire il messaggio");
+		}
+		return ricieve;
+
+	}
+
+	public RicieveMessage controlNameExistance(RicieveMessage name) {
+		RicieveMessage userName = tesiRepository.findByName(name.getName());
+		if (userName != null && userName.getName().equals(name.getName())) {
+			throw new NotNullException("Hai gia inserito un messaggio");
+		}
+		return name;
+	}
+
 //	 public RegisterDto registerAndCheck(RegisterDto registerDto) {
 //		 // add check for username exists in database
 //	        if(userRepository.existsByUsername(registerDto.getUsername())){
@@ -89,7 +86,4 @@ public class TesiControl {
 //	        return registerDto;
 //	 }
 
-
 }
-
-
