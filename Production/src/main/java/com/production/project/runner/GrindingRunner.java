@@ -16,7 +16,7 @@ public class GrindingRunner implements ApplicationRunner {
 	@Override
 	public void run(ApplicationArguments args) {
 		try {
-			//grindServ.createGrinding();
+			grindServ.createGrinding();
 			
 		}catch (NotNullException e) {
             System.err.println("Error: " + e.getMessage());
