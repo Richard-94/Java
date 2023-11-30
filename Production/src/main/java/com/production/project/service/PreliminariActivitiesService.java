@@ -65,9 +65,6 @@ public class PreliminariActivitiesService {
 	    } catch (Exception e) {
 	        throw new RuntimeException("An unexpected error occurred: " + e.getMessage());
 	    }
-	   
-	    
-	    
 	}
 
 

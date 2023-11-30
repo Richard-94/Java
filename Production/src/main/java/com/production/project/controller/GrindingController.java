@@ -1,5 +1,7 @@
 package com.production.project.controller;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -35,18 +37,25 @@ public class GrindingController {
 	 @CrossOrigin(origins = "*", maxAge = 3600)
 		public ResponseEntity<?> stopHeatGrinding(@PathVariable Long id, @RequestBody Grinding raw){
 		 Grinding rawMat = grindServ.stopGrinding(id, raw);
-			return new ResponseEntity<Grinding>(rawMat, HttpStatus.OK);	
+		 System.out.println(raw);
+			return new ResponseEntity<Grinding>(rawMat, HttpStatus.ACCEPTED);	
 		}
 		
 
-		@GetMapping("{id}")
-		@CrossOrigin(origins = "*", maxAge = 3600)
-	
-		public ResponseEntity<?> getSingleEquipment(@PathVariable Long id){
-			Grinding pr = grindServ.grindFind(id);
-			return new ResponseEntity<Grinding>(pr, HttpStatus.OK);
+	 @GetMapping("{id}")
+	 @CrossOrigin(origins = "*", maxAge = 3600)
+	 public ResponseEntity<?> getSingleEquipment(@PathVariable Long id) {
+	     Optional<Grinding> optionalGrinding = grindServ.grindFind(id);
 
-		}
+	     if (optionalGrinding.isPresent()) {
+	         Grinding pr = optionalGrinding.get();
+	         
+	         return new ResponseEntity<Grinding>(pr, HttpStatus.OK);
+	     } else {
+	         // Handle the case where the entity is not found
+	         return new ResponseEntity<>("Entity not found", HttpStatus.NOT_FOUND);
+	     }
+	 }
 
 
 }

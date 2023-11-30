@@ -47,7 +47,6 @@ public class SpringsService {
 			    if ("Aisi".equalsIgnoreCase(springs.getSteelType())) {
 			        processing.setSpraying(spray);
 			    }
-			    
 			    springs.setClient(client);
 			    springs.setOrderDate(orderDate);
 			    springs.setOrderDescription(orderDescription);;
@@ -58,17 +57,13 @@ public class SpringsService {
 			    springs.setProcessing(processing);
 			    springs.setTypeOfProcessSpring(typeOfProcessSpring);
 			    springs.setSteelType(steelType);
-
 			    springsRepo.save(springs);
 			    return springs;
-			    
 		} catch (NotNullException e) {
 	        throw new NotNullException("Element not found: " + e.getMessage());
 	    } catch (Exception e) {
 	        throw new RuntimeException("An unexpected error occurred: " + e.getMessage());
-	    }
-		
-		
+	    }	
 	}
 	
 	public List<Springs> showAllSprings(){

@@ -25,7 +25,7 @@ public class WrappingController {
 	
 	 @PatchMapping("{id}/{rawMatId}/{equipId}/{approvalId}/{paintId}")
 	 @CrossOrigin(origins = "*", maxAge = 3600)
-		public ResponseEntity<?> updateEquipmentStart(@PathVariable Long id,
+		public ResponseEntity<?> startWrapping(@PathVariable Long id,
 				@PathVariable Long rawMatId,
 				@PathVariable Long equipId,
 				@PathVariable Long approvalId,

@@ -50,16 +50,15 @@ public class GrindingService {
 	    } catch (Exception e) {
 	        throw new RuntimeException("An unexpected error occurred: " + e.getMessage());
 	    }
-		
-	
 	}
 	
-	public Grinding grindFind(Long id) {
-		if(!grindRepo.existsById(id)) {
-			throw new EntityNotFoundException("Materiale non esiste!!!");
-		}
-		return grindRepo.findById(id).get();
+	public Optional<Grinding> grindFind(Long id) {
+	    if (!grindRepo.existsById(id)) {
+	        throw new EntityNotFoundException("Materiale non esiste!!!");
+	    }
+	    return grindRepo.findById(id);
 	}
+
 	
 	public Grinding startGrinding(
 			Long grindId,
@@ -110,6 +109,7 @@ public class GrindingService {
 		existingGrind.setStatus(raw.getStatus());
 		return grindRepo.save(existingGrind);
 	}
+
 	
 
 }
