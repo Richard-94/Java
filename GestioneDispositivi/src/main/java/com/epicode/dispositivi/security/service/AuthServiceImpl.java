@@ -1,9 +1,12 @@
 package com.epicode.dispositivi.security.service;
 
 import java.util.HashSet;
+import java.util.Optional;
 import java.util.Set;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -14,9 +17,11 @@ import org.springframework.stereotype.Service;
 import com.epicode.dispositivi.security.entity.ERole;
 import com.epicode.dispositivi.security.entity.Role;
 import com.epicode.dispositivi.security.exception.MyAPIException;
+import com.epicode.dispositivi.security.model.ErrorResponse;
 import com.epicode.dispositivi.security.payload.LoginDto;
 import com.epicode.dispositivi.security.payload.RegisterDto;
 import com.epicode.dispositivi.security.payload.RegisterResponse;
+import com.epicode.dispositivi.security.payload.updateUserDto;
 import com.epicode.dispositivi.security.repository.RoleRepository;
 import com.epicode.dispositivi.security.repository.UserRepository;
 import com.epicode.dispositivi.security.security.JwtTokenProvider;
@@ -28,6 +33,8 @@ import com.epicode.dispositivi.security.entity.User;
 
 @Service
 public class AuthServiceImpl implements AuthService {
+	
+	@Autowired private UserRepository userRepo;
 
     private AuthenticationManager authenticationManager;
     private UserRepository userRepository;
@@ -63,6 +70,9 @@ public class AuthServiceImpl implements AuthService {
 
         return token;
     }
+    
+
+    
 
     @Override
     public RegisterResponse register(RegisterDto registerDto) {
@@ -112,6 +122,27 @@ public class AuthServiceImpl implements AuthService {
 				registerDto.getUsername(), 
 				registerDto.getEmail(), 
 				"User registered successfully!.");
+    }
+    
+    public User updatePassword(updateUserDto updateDto) {
+    	
+    		Optional<User> userOptional = userRepo.findByUsername(updateDto.getUsername());
+    		
+
+    	    if (userOptional.isEmpty()) {
+    	        throw new MyAPIException(HttpStatus.BAD_REQUEST, "Username non esiste");
+    	    }
+
+           
+            User user = userOptional.get();
+            if (!user.getUsername().equals(updateDto.getUsername())) {
+                throw new MyAPIException(HttpStatus.BAD_REQUEST, "Provided username doesn't match existing user");
+            }
+            
+            
+            
+            user.setPassword(passwordEncoder.encode(updateDto.getPassword()));
+            return userRepository.save(user);
     }
     
     public ERole getRole(String role) {
